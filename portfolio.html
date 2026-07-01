@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rock903400-byte | 作品集</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#1a365d;--primary-light:#2b6cb0;--accent:#e8c547;--accent2:#48bb78;--bg:#f7fafc;--card-bg:#fff;--text:#1a202c;--text-light:#718096;--border:#e2e8f0;--shadow:0 4px 24px rgba(0,0,0,.06);--radius:16px;--radius-sm:8px}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC','Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);height:64px;display:flex;align-items:center}
+nav .container{display:flex;justify-content:space-between;align-items:center;width:100%}
+.nav-logo{font-weight:700;font-size:18px;color:var(--primary)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{text-decoration:none;color:var(--text-light);font-weight:500;font-size:14px;transition:color .2s}
+.nav-links a:hover{color:var(--primary-light)}
+
+/* Hero */
+.hero{padding:140px 0 80px;text-align:center;background:linear-gradient(135deg,#1a365d 0,#2b6cb0 50%,#2c5282 100%);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");opacity:.5}
+.hero .container{position:relative;z-index:1}
+.hero-avatar{width:100px;height:100px;border-radius:50%;border:4px solid rgba(255,255,255,.3);margin:0 auto 24px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:40px;color:var(--primary);font-weight:700}
+.hero h1{font-size:44px;font-weight:900;margin-bottom:8px;letter-spacing:-.5px}
+.hero .subtitle{font-size:20px;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:12px}
+.hero p{font-size:16px;color:rgba(255,255,255,.7);max-width:640px;margin:0 auto 32px}
+.hero-badges{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hero-badges span{background:rgba(255,255,255,.12);backdrop-filter:blur(4px);padding:6px 18px;border-radius:20px;font-size:14px;border:1px solid rgba(255,255,255,.15)}
+
+/* Section */
+section{padding:72px 0}
+.section-title{font-size:28px;font-weight:700;margin-bottom:8px;color:var(--primary)}
+.section-desc{color:var(--text-light);margin-bottom:40px;font-size:15px}
+
+/* Stats */
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-bottom:0}
+.stat-card{background:var(--card-bg);border-radius:var(--radius);padding:28px 20px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border)}
+.stat-number{font-size:36px;font-weight:900;color:var(--primary-light);line-height:1.2}
+.stat-label{font-size:14px;color:var(--text-light);margin-top:4px}
+
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:16px}
+.skill-item{background:var(--card-bg);border-radius:var(--radius-sm);padding:20px 12px;text-align:center;box-shadow:var(--shadow);border:1px solid var(--border);transition:transform .2s}
+.skill-item:hover{transform:translateY(-4px)}
+.skill-item i{font-size:28px;color:var(--primary-light);margin-bottom:8px}
+.skill-item span{display:block;font-size:13px;font-weight:500;color:var(--text)}
+
+/* Projects */
+.projects-grid{display:grid;gap:24px}
+.project-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;transition:transform .2s,box-shadow .2s}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.1)}
+.project-card-inner{padding:28px}
+.project-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.project-tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;background:#ebf4ff;color:var(--primary-light);letter-spacing:.3px}
+.project-tag.private{background:#fefcbf;color:#975a16}
+.project-title{font-size:20px;font-weight:700;margin-bottom:6px}
+.project-title a{color:var(--text);text-decoration:none}
+.project-title a:hover{color:var(--primary-light)}
+.project-desc{font-size:14px;color:var(--text-light);margin-bottom:14px;line-height:1.6}
+.project-tech{display:flex;gap:6px;flex-wrap:wrap}
+.project-tech span{font-size:11px;padding:2px 10px;border-radius:4px;background:#edf2f7;color:#4a5568}
+
+/* Flagship */
+.flagship-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:24px}
+.flagship-card{background:var(--card-bg);border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--border);overflow:hidden;transition:transform .2s}
+.flagship-card:hover{transform:translateY(-4px)}
+.flagship-card .card-header{height:6px}
+.flagship-card .card-header.c1{background:linear-gradient(90deg,#2b6cb0,#48bb78)}
+.flagship-card .card-header.c2{background:linear-gradient(90deg,#e8c547,#ed8936)}
+.flagship-card .card-header.c3{background:linear-gradient(90deg,#e53e3e,#ed64a6)}
+.flagship-card .card-header.c4{background:linear-gradient(90deg,#805ad5,#4299e1)}
+.flagship-card-inner{padding:24px}
+.flagship-card-inner .project-title{font-size:18px}
+.flagship-star{color:#e8c547;font-size:13px;margin-left:6px}
+
+/* CTA */
+.cta{background:var(--primary);color:#fff;text-align:center;padding:64px 0}
+.cta h2{font-size:30px;font-weight:700;margin-bottom:12px}
+.cta p{color:rgba(255,255,255,.7);margin-bottom:28px;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-btn{display:inline-block;background:var(--accent);color:var(--primary);padding:14px 40px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,197,71,.4)}
+
+/* Footer */
+footer{background:#0f2440;color:rgba(255,255,255,.5);text-align:center;padding:32px 0;font-size:13px}
+footer a{color:rgba(255,255,255,.6);text-decoration:none}
+footer a:hover{color:#fff}
+
+/* Responsive */
+@media(max-width:768px){
+.hero h1{font-size:30px}
+.hero .subtitle{font-size:16px}
+.flagship-grid{grid-template-columns:1fr}
+.nav-links{display:none}
+section{padding:48px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav>
+<div class="container">
+<div class="nav-logo"><i class="fas fa-code"></i> rock903400-byte</div>
+<ul class="nav-links">
+<li><a href="#projects">專案</a></li>
+<li><a href="#skills">技術</a></li>
+<li><a href="https://github.com/rock903400-byte" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+<div class="container">
+<div class="hero-avatar">&lt;/&gt;</div>
+<h1>台灣儲蓄互助社<br>數位轉型專家</h1>
+<div class="subtitle">rock903400-byte · 全端開發者</div>
+<p>專注於儲蓄互助社（Credit Union）生態系的金融科技開發，涵蓋風險管理戰情室、LINE AI 智能客服、稽核報告自動化、法拍分析等領域，累積 26 個實戰專案。</p>
+<div class="hero-badges">
+<span>26 個專案</span>
+<span>6 種語言</span>
+<span>Python</span>
+<span>TypeScript</span>
+<span>Firebase</span>
+<span>Streamlit</span>
+</div>
+</div>
+</section>
+
+<!-- Stats -->
+<div class="container" style="margin-top:-40px;position:relative;z-index:2">
+<div class="stats-grid">
+<div class="stat-card"><div class="stat-number">26</div><div class="stat-label">總專案數</div></div>
+<div class="stat-card"><div class="stat-number">14</div><div class="stat-label">公開專案</div></div>
+<div class="stat-card"><div class="stat-number">8</div><div class="stat-label">私有專案</div></div>
+<div class="stat-card"><div class="stat-number">6</div><div class="stat-label">程式語言</div></div>
+<div class="stat-card"><div class="stat-number">4</div><div class="stat-label">旗艦專案</div></div>
+</div>
+</div>
+
+<!-- Skills -->
+<section id="skills">
+<div class="container">
+<h2 class="section-title"><i class="fas fa-cogs" style="color:var(--primary-light)"></i> 技術棧</h2>
+<p class="section-desc">跨足前端、後端、雲端、AI 的全端開發能力</p>
+<div class="skills-grid">
+<div class="skill-item"><i class="fab fa-python"></i><span>Python</span></div>
+<div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+<div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+<div class="skill-item"><i class="fab fa-html5"></i><span>HTML/CSS</span></div>
+<div class="skill-item"><i class="fas fa-fire"></i><span>Firebase</span></div>
+<div class="skill-item"><i class="fas fa-robot"></i><span>Gemini AI</span></div>
+<div class="skill-item"><i class="fas fa-database"></i><span>Supabase</span></div>
+<div class="skill-item"><i class="fas fa-chart-line"></i><span>Streamlit</span></div>
+<div class="skill-item"><i class="fas fa-bolt"></i><span>FastAPI</span></div>
+<div class="skill-item"><i class="fas fa-wind"></i><span>Pinecone</span></div>
+<div class="skill-item"><i class="fab fa-google"></i><span>GAS</span></div>
+<div class="skill-item"><i class="fas fa-terminal"></i><span>PowerShell</span></div>
+</div>
+</div>
+</section>
+
+<!-- Flagship Projects -->
+<section id="projects" style="background:#edf2f7">
+<div class="container">
+<h2 class="section-title"><i class="fas fa-rocket" style="color:var(--primary-light)"></i> 旗艦專案</h2>
+<p class="section-desc">最具代表性的核心作品</p>
+<div class="flagship-grid">
+
+<div class="flagship-card">
+<div class="card-header c1"></div>
+<div class="flagship-card-inner">
+<div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">Python</span><span class="project-tag">Streamlit</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/CU-Analysis-v1" target="_blank">CU-Analysis-v1</a></div>
+<div class="project-desc">儲互社分析系統 — 專為台灣儲蓄互助社打造的風險管理與財務分析平台。包含自動化風險判定（2/5 原則）、狀態雷達監控、風險矩陣、個社健檢、趨勢追蹤與財務戰情室。高齡友善 UI 設計。</div>
+<div class="project-tech"><span>Pandas</span><span>Plotly</span><span>Supabase</span><span>Pytest</span></div>
+</div>
+</div>
+
+<div class="flagship-card">
+<div class="card-header c2"></div>
+<div class="flagship-card-inner">
+<div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">TypeScript</span><span class="project-tag">React</span><span class="project-tag">Firebase</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/line-ai-chat-bot" target="_blank">LINE AI 生態系</a></div>
+<div class="project-desc">LINE AI 台灣儲社生態系，四大子專案整合：LINE AI Bot（Gemini 2.5 + Pinecone RAG）、特約商店 Web App（React 19 + Leaflet 地圖）、共購系統、遊戲中心。跨專案 Firebase 整合。</div>
+<div class="project-tech"><span>Gemini AI</span><span>Pinecone</span><span>Firestore</span><span>Vite</span><span>Playwright</span></div>
+</div>
+</div>
+
+<div class="flagship-card">
+<div class="card-header c3"></div>
+<div class="flagship-card-inner">
+<div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">Python</span><span class="project-tag">GAS</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/auction" target="_blank">法拍補償 PRO 系統 <i class="fas fa-star" style="color:#e8c547;font-size:13px"></i></a></div>
+<div class="project-desc">台灣法拍土地投資監控與分析系統。雙軌架構：Google Apps Script 生產環境（爬蟲 + Web App）+ Python 驗證工具。自動抓取司法院法拍資訊，計算預估補償金與 ROI。</div>
+<div class="project-tech"><span>Web Scraping</span><span>Excel</span></div>
+</div>
+</div>
+
+<div class="flagship-card">
+<div class="card-header c4"></div>
+<div class="flagship-card-inner">
+<div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">JavaScript</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/credit-score-system" target="_blank">信用評分系統</a></div>
+<div class="project-desc">信用評分模擬與法規檢索平台。包含評分核心引擎、大規模模擬腳本（1,000/10,000 筆）、438KB 法規資料庫、Playwright E2E 測試。</div>
+<div class="project-tech"><span>ESLint</span><span>Playwright</span><span>GitHub Pages</span></div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- All Projects -->
+<section>
+<div class="container">
+<h2 class="section-title"><i class="fas fa-folder-open" style="color:var(--primary-light)"></i> 所有專案</h2>
+<p class="section-desc">依領域分類的完整專案清單</p>
+
+<div style="margin-bottom:40px">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:4px;height:20px;background:var(--primary-light);border-radius:2px"></span> 稽核與財務</h3>
+<div class="flagship-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+
+<div class="project-card">
+<div class="project-card-inner">
+<div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">TypeScript</span></div>
+<div class="project-title">115-audit-report</div>
+<div class="project-desc">儲蓄互助社 115 年度稽核報告產生器。Vite + TypeScript + GAS 整合，自動化產出年度稽核報告。</div>
+<div class="project-tech"><span>Vite</span><span>GAS</span><span>E2E</span></div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-card-inner">
+<div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">Python</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/report-generator" target="_blank">report-generator</a></div>
+<div class="project-desc">AI 報表產生器。Streamlit 應用，含 AI 生成、圖表繪製、多格式匯出、HTML 模板。</div>
+<div class="project-tech"><span>Streamlit</span><span>CI/CD</span></div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-card-inner">
+<div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">PowerShell</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/accounting-recon" target="_blank">accounting-recon</a></div>
+<div class="project-desc">對帳單異常社員偵測工具（開源版）。PowerShell 撰寫，自動化對帳與異常指標分析。</div>
+<div class="project-tech"><span>PowerShell</span><span>異常偵測</span></div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-card-inner">
+<div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">Python</span></div>
+<div class="project-title"><a href="https://github.com/rock903400-byte/audit-app" target="_blank">audit-app</a></div>
+<div class="project-desc">稽核應用程式。Python 撰寫的金融稽核工具，用於合作社/金融機構稽核作業。</div>
+<div class="project-tech"><span>Python</span></div>
+</div>
+</div>
+
+<div class="project-card">
+<div class="project-card-inner">
+<div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">PowerShell</span></div>
+<div class="project-title">account-statement-tool</div>
+<div class="project-desc">對帳單工具（進階版）。PowerShell + Access DB，含異常偵測、稽核登記、餘額核對、放款合併檢查。</div>
+<div class="project-tech"><span>PowerShell</span><span>Access DB</span></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div style="margin-bottom:40px">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:4px;height:20px;background:#48bb78;border-radius:2px"></span> 合作社管理</h3>
+<div class="flagship-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">FastAPI</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/legal-index-system" target="_blank">legal-index-system</a></div><div class="project-desc">協會法規智慧索引系統。FastAPI + PDF.js + SQLite 全文檢索，支援 PDF/Word 搜尋與自動高亮。</div><div class="project-tech"><span>FastAPI</span><span>PDF.js</span><span>SQLite</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">GAS</span></div><div class="project-title">balance-sheet-gas</div><div class="project-desc">資產負債表系統。GAS Web App，Google Sheets 為資料庫，支援資產/負債/權益三大類財務數據編輯。</div><div class="project-tech"><span>GAS</span><span>Google Sheets</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">GAS</span></div><div class="project-title">bill-manager</div><div class="project-desc">個人帳單系統。GAS Web App，含離線佇列、搜尋、Toast 通知，以 Google Sheets 為後端。</div><div class="project-tech"><span>GAS</span><span>Vanilla JS</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">CSS</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/direct" target="_blank">direct</a></div><div class="project-desc">理事相關前端頁面。合作社理事管理工具，簡潔響應式設計。</div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">Python</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/director" target="_blank">director</a></div><div class="project-desc">理事管理後台。Python 後端 + HTML 模板，合作社理事會管理系統。</div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">HTML</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/she-di-zhi" target="_blank">she-di-zhi</a></div><div class="project-desc">社地址地圖檢視器。Leaflet 地圖 + Excel 資料，將合作社地址視覺化。</div><div class="project-tech"><span>Leaflet</span><span>Excel</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">HTML</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/lucao-report" target="_blank">lucao-report</a></div><div class="project-desc">鹿草社理事會報告。公開的合作社理事會報告頁面，部署於 GitHub Pages。</div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">HTML</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/haixing-report" target="_blank">haixing-report</a></div><div class="project-desc">海星社理事會報告。公開的合作社理事會報告頁面，部署於 GitHub Pages。</div></div></div>
+
+</div>
+</div>
+
+<div style="margin-bottom:40px">
+<h3 style="font-size:18px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:8px"><span style="display:inline-block;width:4px;height:20px;background:#e8c547;border-radius:2px"></span> LINE 生態系與其他工具</h3>
+<div class="flagship-grid" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">JavaScript</span></div><div class="project-title">culroc-line</div><div class="project-desc">CULROC LINE 整合應用。LINE 平台整合服務。</div><div class="project-tech"><span>LINE</span><span>JavaScript</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">JavaScript</span></div><div class="project-title">line</div><div class="project-desc">LINE 整合應用。LINE 平台開發與測試。</div><div class="project-tech"><span>LINE</span><span>JavaScript</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">JavaScript</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/culine" target="_blank">culine</a></div><div class="project-desc">合作社線上查詢工具。簡潔的前端查詢頁面。</div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag private">🔒 私有</span><span class="project-tag">Python</span></div><div class="project-title">download-tool</div><div class="project-desc">資料下載工具。Streamlit 雙 Tab 應用，從政府網站下載面積資料與 PR019 資料並自動處理。</div><div class="project-tech"><span>Streamlit</span><span>Web Scraping</span></div></div></div>
+
+<div class="project-card"><div class="project-card-inner"><div class="project-tags"><span class="project-tag">公開</span><span class="project-tag">HTML</span></div><div class="project-title"><a href="https://github.com/rock903400-byte/FitLog-AI" target="_blank">FitLog-AI</a></div><div class="project-desc">健身日誌 AI 工具。79KB 單頁 SPA 應用，包含 AI 輔助健身記錄功能。</div></div></div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Private Summary -->
+<section style="background:#edf2f7;padding:48px 0">
+<div class="container" style="text-align:center">
+<p style="color:var(--text-light);font-size:14px"><i class="fas fa-lock" style="margin-right:6px"></i> 標示 🔒 為私有專案，可來信洽談觀看原始碼與案例細節</p>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+<div class="container">
+<h2>打造你的合作社數位方案</h2>
+<p>從風險管理戰情室到 LINE 智能客服，為儲蓄互助社量身打造的完整數位轉型服務</p>
+<a href="mailto:rock903400@gmail.com" class="cta-btn"><i class="fas fa-envelope" style="margin-right:8px"></i> 聯絡我</a>
+</div>
+</section>
+
+<footer>
+<div class="container">
+<p style="margin-bottom:8px"><a href="https://github.com/rock903400-byte" target="_blank"><i class="fab fa-github" style="margin-right:6px"></i>rock903400-byte</a></p>
+<p>&copy; 2026 rock903400-byte · Built for Taiwan Credit Unions</p>
+</div>
+</footer>
+
+</body>
+</html>
