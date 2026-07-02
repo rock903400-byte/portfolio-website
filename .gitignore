@@ -1,0 +1,40 @@
+# Ignore all subdirectories (other projects)
+/*/
+
+# System / IDE
+.clasp.json
+.claude/
+.gemini/
+.agents/
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# Streamlit
+.streamlit/
+
+# Secrets and Env
+.env*
+*.pem
+*.key
+*.p12
+*serviceAccount*.json
+
+# Data and Spreadsheets
+*.xlsx
+*.XLSX
+*.xls
+*.XLS
+*.csv
+*.CSV
+*.tsv
+*.TSV
+*.dbf
+*.DBF
