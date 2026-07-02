@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rock903400-byte | 儲蓄互助社數位轉型作品集</title>
-    <meta name="description" content="全端開發者 rock903400-byte 的個人作品集，專注於儲蓄互助社 (Credit Union) 金融科技開發，包含風險管理戰情室、LINE AI 智慧客服、自動化稽核對帳及法拍監控等。">
+    <title>rock903400 | AI 數位轉型專家</title>
+    <meta name="description" content="全端開發者 rock903400 的個人作品集，專注於 AI 數位轉型開發，包含 AI 客服、LINE 應用、自動化稽核對帳、報告產生器及資料分析工具等。">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
@@ -1436,33 +1436,29 @@
                     <text x="50" y="58" font-family="'Inter', sans-serif" font-weight="800" font-size="26" fill="#f8fafc" text-anchor="middle">&lt;/&gt;</text>
                 </svg>
             </div>
-            <h1>金融科技 <span class="hero-title-gradient">數位轉型專家</span></h1>
-            <div class="subtitle">rock903400-byte · Full-Stack Developer</div>
+            <h1>AI <span class="hero-title-gradient">數位轉型專家</span></h1>
+            <div class="subtitle">rock903400 · 幫你把麻煩事交給電腦自動處理</div>
             <p class="bio">
-                深耕儲蓄互助社 (Credit Union) 金融科技開發，涵蓋風險管理戰情室、LINE AI 智慧客服、自動化稽核與對帳系統、報告產生器及法拍監控工具，累積 31 個實戰專案，助力合作金融機構實現全面數位化升級。
+                我專門幫企業和店家打造「會自己工作」的軟體系統，至今累積 25 套在實際運作的工具。從 AI 自動回覆客服、帳目比對、報告自動產生到客製化儀表板分析，都能為你量身打造。你不用懂技術，把需求告訴我，我來把解法做出來。
             </p>
             
             <!-- Stats -->
             <div class="stats-grid">
                 <div class="stat-card">
-                    <div class="stat-number">31</div>
-                    <div class="stat-label">專案總數</div>
+                    <div class="stat-number" id="stat-total">25</div>
+                    <div class="stat-label">完成作品</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">19</div> <!-- Adjusted for consistency with user inputs -->
+                    <div class="stat-number" id="stat-public">-</div>
                     <div class="stat-label">公開專案</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">12</div>
+                    <div class="stat-number" id="stat-private">-</div>
                     <div class="stat-label">私有專案</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">6</div>
+                    <div class="stat-number" id="stat-langs">-</div>
                     <div class="stat-label">程式語言</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">獲得星數</div>
                 </div>
             </div>
         </div>
@@ -1472,7 +1468,7 @@
     <section class="container" id="projects" style="padding: 60px 0 20px;">
         <div class="section-header">
             <h2 class="section-title">專案作品成果</h2>
-            <p class="section-desc">包含風險管理、對帳自動化、LINE 服務等 6 大核心領域</p>
+            <p class="section-desc">包含 AI 應用、帳務自動化、LINE 服務與實用工具等領域</p>
         </div>
 
         <!-- Controls: Search, Sort and Filter -->
@@ -1487,32 +1483,32 @@
                     <select id="sort-select" class="sort-select">
                         <option value="name-asc">名稱 (A-Z)</option>
                         <option value="updated-desc" selected>最近更新</option>
-                        <option value="stars-desc">獲得星數</option>
+                        <!-- stars sort removed -->
                     </select>
                 </div>
             </div>
             
             <div class="filters-group">
                 <button class="filter-btn active" data-category="All">
-                    全部 <span class="filter-count">31</span>
+                    全部 <span class="filter-count" id="count-all">25</span>
                 </button>
                 <button class="filter-btn" data-category="風險管理">
-                    風險管理 <span class="filter-count">4</span>
+                    風險管理 <span class="filter-count" id="count-風險管理">2</span>
                 </button>
-                <button class="filter-btn" data-category="LINE生態">
-                    LINE生態 <span class="filter-count">4</span>
+                <button class="filter-btn" data-category="LINE 應用">
+                    LINE 應用 <span class="filter-count" id="count-LINE-應用">4</span>
                 </button>
                 <button class="filter-btn" data-category="稽核對帳">
-                    稽核對帳 <span class="filter-count">5</span>
+                    稽核對帳 <span class="filter-count" id="count-稽核對帳">5</span>
                 </button>
                 <button class="filter-btn" data-category="報告產生器">
-                    報告產生器 <span class="filter-count">3</span>
+                    報告產生器 <span class="filter-count" id="count-報告產生器">3</span>
                 </button>
                 <button class="filter-btn" data-category="工具">
-                    工具 <span class="filter-count">8</span>
+                    工具 <span class="filter-count" id="count-工具">8</span>
                 </button>
                 <button class="filter-btn" data-category="其他">
-                    其他 <span class="filter-count">7</span>
+                    其他 <span class="filter-count" id="count-其他">3</span>
                 </button>
             </div>
         </div>
@@ -1541,8 +1537,8 @@
     <section class="analytics-section" id="analytics">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">技術棧數據分析</h2>
-                <p class="section-desc">透過專案儲存庫分析的核心技術標籤</p>
+                <h2 class="section-title">我會用的工具</h2>
+                <p class="section-desc">從專案中歸納的核心技術標籤</p>
             </div>
 
             <div class="cloud-container">
@@ -1559,9 +1555,9 @@
         <div class="container">
             <div class="policy-card">
                 <i class="fas fa-shield-halved"></i>
-                <h2>私有專案存取聲明</h2>
+                <h2>關於部分不公開作品</h2>
                 <p>
-                    本作品集中標示為 🔒 私有 (Private) 的專案，因涉及特定儲蓄互助社的敏感商業邏輯、財務會計資料或 LINE 存取權限而未公開程式碼。若您是儲蓄互助社理事、稽核或相關領域開發者，歡迎來信索取簡報資料，或約定線上會議以觀看實際系統的操作演示與架構說明。
+                    作品中標示為 🔒 私有 (Private) 的專案，因涉及客戶的商業邏輯、財務資料或系統權限而未公開原始碼。若你是企業主或相關領域的合作夥伴，歡迎來信索取簡報資料，或約定線上會議觀看實際系統的操作演示。
                 </p>
             </div>
         </div>
@@ -1570,8 +1566,8 @@
     <!-- CTA Contact Section -->
     <section class="cta" id="contact">
         <div class="container">
-            <h2>打造專屬儲互社數位方案</h2>
-            <p>不論是風險判定、對帳優化還是 AI 客服機器人，為儲蓄互助社量身定做安全、可靠、高效率的系統</p>
+            <h2>想讓你的工作更省事嗎？</h2>
+            <p>不論是 AI 自動回覆、帳務比對、報表自動產生還是客製化開發，我都能幫你把繁瑣工作交給電腦處理。</p>
             <form class="contact-form" id="contact-form" action="https://formsubmit.co/rock903400@gmail.com" method="POST">
                 <div class="form-group">
                     <label for="form-name">姓名</label>
@@ -1585,7 +1581,7 @@
                     <label for="form-message">訊息內容</label>
                     <textarea id="form-message" name="message" class="form-textarea" placeholder="請描述您的需求或合作想法 ..." required></textarea>
                 </div>
-                <input type="hidden" name="_subject" value="儲蓄互助社數位轉型諮詢">
+                <input type="hidden" name="_subject" value="數位轉型開發諮詢">
                 <input type="hidden" name="_template" value="table">
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_next" value="">
@@ -1605,7 +1601,7 @@
                     <i class="fab fa-github" style="margin-right: 6px;"></i>rock903400-byte
                 </a>
             </p>
-            <p>&copy; 2026 rock903400-byte · Built for Taiwan Credit Unions</p>
+            <p>&copy; 2026 rock903400 · Built for Your Business</p>
         </div>
     </footer>
 
@@ -1644,7 +1640,229 @@
         
         // Injecting the language statistics
         const languageStats = {"HTML": 14, "Python": 8, "JavaScript": 5, "TypeScript": 1, "PowerShell": 2, "CSS": 1};
-        
+
+        // Hide test/sandbox/legacy projects (not shown to clients)
+        const hiddenProjects = ['test', 'auction', 'gas-sandbox-archive', 'cu-risk-dashboard-prototype', 'cu-risk-dashboard-legacy-v1', 'portfolio-website'];
+        const hiddenSet = new Set(hiddenProjects);
+
+        // Copy overrides — plain-language descriptions for non-technical clients
+        const copyOverrides = {
+            'cu-ledger-audit-tool': {
+                description: '自動比對帳目是否相符，快速找出數字對不上的異常項目。',
+                modalIntro: [
+                    '🔍 自動對帳：自動比對各類帳目餘額，快速抓出數字對不上的地方。',
+                    '⚡ 異常預警：自動標示金額有疑慮的帳戶，降低人工核對的疏漏。',
+                    '📈 智慧檢查：透過統計方法檢驗資料合理性，輔助稽核決策。'
+                ]
+            },
+            'foreclosure-compensation-analyzer': {
+                description: '自動收集全台法拍土地資訊，精算補償金與投資回報率。',
+                modalIntro: [
+                    '🛰️ 自動收集：自動抓取政府最新法拍土地與案件公開資訊。',
+                    '🧮 精算回報：依指定公式自動估算補償金額與投資報酬率。',
+                    '🎯 決策輔助：協助投資人篩選高潛力案源，降低投資風險。'
+                ]
+            },
+            'cu-branch-locator-map': {
+                description: '全台據點電子地圖，一鍵查詢各分點位置與聯絡資訊。',
+                modalIntro: [
+                    '📍 地圖查詢：在地圖上瀏覽全台各據點位置，方便快速定位。',
+                    '🔍 快速搜尋：輸入地區即可找到鄰近據點，操作直覺。',
+                    '📞 資訊整合：點擊標記即可查看各據點的聯絡資訊。'
+                ]
+            },
+            'culine': {
+                description: '手機 LINE 服務串接網頁，讓會員在手機上快速查詢資訊。',
+                modalIntro: [
+                    '📱 行動服務：會員專屬的 LINE 行動服務網頁，手機即可使用。',
+                    '⚡ 即時試算：在手機上快速試算利率與查詢常用功能。',
+                    '🧪 介面優化：針對手機操作最佳化的前端介面設計。'
+                ]
+            },
+            'direct': {
+                description: '內部會議通知與公告管理看板，團隊隨時掌握最新進度。',
+                modalIntro: [
+                    '📅 會議通知：線上查看會議通知、職務分配與重要公告。',
+                    '🏢 內部專區：團隊專用的聯絡與公告管理看板。',
+                    '🔒 資訊保護：集中管理通訊錄，防止敏感資訊外流。'
+                ]
+            },
+            'culroc-line': {
+                description: 'LINE 官方帳號搭配特約商家地圖，會員手機找門市最方便。',
+                modalIntro: [
+                    '🤖 官方串接：搭配 LINE 官方帳號提供完整行動服務。',
+                    '🗺️ 商家地圖：手機上透過地圖搜尋特約商家，瀏覽據點。',
+                    '🎁 優惠展示：快速找到合作商家並查看專屬優惠。'
+                ]
+            },
+            'cu-line-rate-lookup': {
+                description: 'LINE 一鍵試算利息與查詢利率，省去翻找表格的時間。',
+                modalIntro: [
+                    '💰 利息試算：手機版利率速查平台，一鍵動態試算。',
+                    '📱 一鍵查詢：在 LINE 聊天室點擊即可試算，省去翻表時間。',
+                    '⚡ 便民介面：大字體清晰操作，適合各年齡層使用。'
+                ]
+            },
+            'credit-score-system': {
+                description: '透過還款與財務數據自動評估信用分數，輔助審核決策。',
+                modalIntro: [
+                    '📈 信用評分：自動化評估信用分數與還款能力。',
+                    '📜 法規檢索：內建相關法規條文，自動判定案件是否合規。',
+                    '🛡️ 風險防範：協助審核人員客觀評估每筆案件的風險等級。'
+                ]
+            },
+            'balance-sheet-gas': {
+                description: '線上登錄財務數字，自動產出資產負債圖表，雲端儲存。',
+                modalIntro: [
+                    '📝 線上編製：在網頁上直接登錄資產、負債與權益數據。',
+                    '☁️ 雲端儲存：後端對接雲端試算表，免去架設資料庫。',
+                    '📊 報表視覺化：登錄後自動產出財務佔比圖表，協助管理決策。'
+                ]
+            },
+            'line-ai-ecosystem': {
+                description: '結合 AI 自動回覆、線上商城與地圖搜尋的 LINE 一站式服務。',
+                modalIntro: [
+                    '🤖 AI 客服：串接 AI 技術，自動回答客戶常見問題與諮詢。',
+                    '🛍️ 線上商城：整合商品瀏覽與優惠展示，提升轉換率。',
+                    '🎮 互動功能：搭配小遊戲與會員中心，提升客戶黏著度。'
+                ]
+            },
+            'cu-statement-reconciliation-pro': {
+                description: '自動從大量帳務資料中，抓出利率不符或數字異常的帳戶。',
+                modalIntro: [
+                    '🚨 異常偵測：自動篩選出利率不符或餘額有疑慮的異常帳戶。',
+                    '🛡️ 稽核防線：自動標示潛在帳務錯誤，防止人為疏失。',
+                    '⚙️ 進階比對：支援名單管理與合併檢查，提升查核效率。'
+                ]
+            },
+            'cu-board-info-site': {
+                description: '管理階層專屬的聯絡資訊、會議通知與職責查詢介面。',
+                modalIntro: [
+                    '🏢 資訊站：管理階層的聯絡資訊與會議通知管理介面。',
+                    '📅 職責查詢：清楚呈現各職務分工，方便協同作業。',
+                    '🌐 線上查閱：手機隨時查閱通訊錄與最新公告。'
+                ]
+            },
+            'cu-haixing-report': {
+                description: '將紙本營運報告轉為線上視覺化網站，隨時查閱。',
+                modalIntro: [
+                    '📊 數位報告：傳統紙本報告轉化為線上網站。',
+                    '🌱 無紙化：隨時查閱最新營運摘要，落實無紙化。',
+                    '⚡ 即時數據：視覺化呈現各項指標變動趨勢，一目了然。'
+                ]
+            },
+            'cu-report-lucao': {
+                description: '營運報告數位化，財務數字以清晰圖表呈現。',
+                modalIntro: [
+                    '📊 數位報告：營運報告的數位化展示網站。',
+                    '🌐 公開查閱：財務數字以清晰網頁版面呈現。',
+                    '🛡️ 營運透明：提升資訊透明度，便於追蹤業務進度。'
+                ]
+            },
+            'FitLog-AI': {
+                description: '免登入健身記錄工具，自動繪製訓練進度曲線。',
+                modalIntro: [
+                    '🏋️ 健身日記：記錄訓練重量、次數與體重變化。',
+                    '📊 進度視覺化：自動繪製趨勢折線圖，成效一目了然。',
+                    '🔒 隱私安全：免註冊免登入，資料存在本機裝置。'
+                ]
+            },
+            'cu-rate-finder': {
+                description: '線上輸入金額即試算利息，大字體適合各年齡層。',
+                modalIntro: [
+                    '💰 線上試算：輸入金額即試算利息與方案。',
+                    '📜 規則整合：集中呈現各項規則，減少諮詢時間。',
+                    '📱 手機友善：大字體大按鈕，適合各年齡層。'
+                ]
+            },
+            'cu-bylaws-search': {
+                description: '上傳文件即可全文搜尋，關鍵字自動標示位置。',
+                modalIntro: [
+                    '🔍 全文檢索：上傳 PDF 或 Word 即可一鍵搜尋文件內容。',
+                    '💡 自動高亮：搜尋後自動標示關鍵字位置，省去逐頁尋找。',
+                    '📱 手機閱讀：為手機閱讀最佳化，隨時隨地查詢規定。'
+                ]
+            },
+            'culroc-doc-sync': {
+                description: '一鍵自動下載最新文件並備份雲端，省去繁瑣登入。',
+                modalIntro: [
+                    '📂 自動下載：一鍵自動下載最新文件，免去繁瑣登入。',
+                    '☁️ 雲端備份：自動備份至雲端硬碟，方便團隊分享。',
+                    '⏱️ 行政減負：免除重複人工作業，節省文書處理時間。'
+                ]
+            },
+            'shiangan-metal-website-mockups': {
+                description: '企業官方網站改版的前端設計稿預覽。',
+                modalIntro: [
+                    '🎨 官網改版：企業網站改版的前端設計稿測試。',
+                    '📐 版面迭代：展示多種風格的網頁排版方案。',
+                    '⚠️ 設計預覽：供設計確認與討論用途。'
+                ]
+            },
+            'accounting-recon': {
+                description: '自動核對年度對帳單，篩選出帳務異常項目。',
+                modalIntro: [
+                    '🔍 年度查漏：自動核對年度對帳單的腳本工具。',
+                    '🚨 異常比對：篩選出利率不合規或資料異常的項目。',
+                    '💼 稽核減負：程式自動化查核，降低人為出錯。'
+                ]
+            },
+            'gov-land-data-downloader': {
+                description: '一鍵打包下載政府公開資料，省去手動複製貼上。',
+                modalIntro: [
+                    '📥 資料下載器：自動化打包下載政府公開資料。',
+                    '💼 資料彙整：同時支援多類報表下載，方便彙整分析。',
+                    '⏱️ 省時自動化：省去手動翻頁與複製貼上，提升效率。'
+                ]
+            },
+            'bill-manager': {
+                description: '離線記帳系統，連線後自動同步到雲端試算表。',
+                modalIntro: [
+                    '📶 離線記帳：無網路時先暫存，恢復連線自動上傳。',
+                    '☁️ 自動同步：記帳資料自動存入雲端，免手動備份。',
+                    '🎉 互動回饋：操作回饋特效，提升使用體驗。'
+                ]
+            },
+            'cu-annual-audit-report-generator': {
+                description: '離線可用的查核報告產生器，一鍵彙整數據產出報表。',
+                modalIntro: [
+                    '📅 進度管理：管理查核日程並追蹤回件狀況。',
+                    '📑 報告生成：一鍵彙整數據，自動產出查核報告。',
+                    '📶 離線可用：純網頁應用，無網路也能順暢操作。'
+                ]
+            },
+            'report-generator': {
+                description: '輸入數字，AI 自動撰寫營運分析並繪製圖表。',
+                modalIntro: [
+                    '🤖 AI 寫報告：輸入基本數據，AI 自動寫出營運分析文字。',
+                    '📈 自動繪圖：一鍵畫出趨勢圖表，並檢驗資料合理性。',
+                    '⏱️ 效率提升：大幅節省撰寫財務報告的文書作業時間。'
+                ]
+            },
+            'cu-risk-dashboard': {
+                description: '整合財報的風險健檢儀表板，大字體高齡友善設計。',
+                modalIntro: [
+                    '🏥 財務健檢：整合財報數據，自動進行風險指標健檢。',
+                    '👴 高齡友善：大字體與大按鈕設計，適合各年齡層操作。',
+                    '📊 風險戰情室：即時呈現風險警示與趨勢圖表，輔助決策。'
+                ]
+            }
+        };
+
+        // Remove hidden projects (splice is safe with const array)
+        for (let i = projects.length - 1; i >= 0; i--) {
+            if (hiddenSet.has(projects[i].name)) {
+                projects.splice(i, 1);
+            }
+        }
+
+        // Apply copy overrides + rename category + clean up topics
+        projects.forEach(p => {
+            if (copyOverrides[p.name]) Object.assign(p, copyOverrides[p.name]);
+            if (p.category === 'LINE生態') p.category = 'LINE 應用';
+            p.topics = p.topics.filter(t => !['credit-union'].includes(t));
+        });
+
         // Selected filter state
         let currentCategory = 'All';
         let currentSearchQuery = '';
@@ -1665,12 +1883,20 @@
         // Category class mapper
         const categoryClasses = {
             '風險管理': 'cat-risk',
-            'LINE生態': 'cat-line',
+            'LINE 應用': 'cat-line',
             '稽核對帳': 'cat-audit',
             '報告產生器': 'cat-report',
             '工具': 'cat-tool',
             '其他': 'cat-other'
         };
+
+        function updateStats() {
+            document.getElementById('stat-total').textContent = projects.length;
+            document.getElementById('stat-public').textContent = projects.filter(p => !p.isPrivate).length;
+            document.getElementById('stat-private').textContent = projects.filter(p => p.isPrivate).length;
+            const langs = new Set(projects.filter(p => p.language && p.language !== 'Other').map(p => p.language));
+            document.getElementById('stat-langs').textContent = langs.size;
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             initTheme();
@@ -1680,6 +1906,7 @@
             initClearFilters();
             initModal();
             renderTagCloud();
+            updateStats();
             initScrollEffects();
             initMobileMenu();
             initForm();
@@ -1737,14 +1964,10 @@
                 
                 return matchCategory && matchTag && matchSearch;
             }).sort((a, b) => {
-                if (currentSort === 'name-asc') {
-                    return a.name.localeCompare(b.name);
-                } else if (currentSort === 'stars-desc') {
-                    return b.stars - a.stars;
-                } else {
-                    // updated-desc
+                    if (currentSort === 'name-asc') {
+                        return a.name.localeCompare(b.name);
+                    }
                     return b.updatedAt.localeCompare(a.updatedAt);
-                }
             });
         }
 
