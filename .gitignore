@@ -38,3 +38,6 @@ venv/
 *.TSV
 *.dbf
 *.DBF
+
+# Local Netlify folder
+.netlify
