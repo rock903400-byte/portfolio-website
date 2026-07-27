@@ -1,5 +1,6 @@
 # Ignore all subdirectories (other projects)
 /*/
+!/cu-localrevival-report/
 
 # System / IDE
 .clasp.json

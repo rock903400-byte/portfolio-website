@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>儲蓄互助社推動地方創生與青年創業之可行性研究 — 台灣法規架構與國際標竿比較</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#0F2A4A;--secondary:#2E5E8C;--accent:#C9A961;--light-bg:#FAFBFC;--text:#1F2937;--muted:#6B7280;--border:#E5E7EB;--success:#059669;--warning:#D97706;--danger:#DC2626;--shadow:0 4px 16px rgba(15,42,74,0.08);--radius:8px}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans TC','Microsoft JhengHei','PingFang TC',-apple-system,sans-serif;color:var(--text);background:var(--light-bg);line-height:1.8;font-size:16px}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;overflow-x:auto;gap:8px}
+nav a{white-space:nowrap;font-size:13px;color:var(--muted);text-decoration:none;padding:4px 10px;border-radius:4px;transition:.2s}
+nav a:hover{background:var(--light-bg);color:var(--primary)}
+nav a.active{color:var(--primary);font-weight:600}
+.hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:88px 24px 48px;text-align:center;margin-top:52px}
+.hero h1{font-size:clamp(22px,3.2vw,36px);font-weight:700;max-width:800px;margin:0 auto 8px}
+.hero p{font-size:clamp(14px,1.2vw,17px);opacity:.85;max-width:640px;margin:0 auto}
+.hero .meta{margin-top:16px;font-size:14px;opacity:.7}
+
+.container{max-width:880px;margin:0 auto;padding:0 20px}
+section{padding:40px 0;border-bottom:1px solid var(--border);scroll-margin-top:60px}
+section:last-of-type{border-bottom:none}
+
+h2{font-size:clamp(20px,2.2vw,26px);color:var(--primary);margin-bottom:2px;display:flex;align-items:center;gap:10px}
+h2 .sec-num{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--primary);color:#fff;font-size:14px;font-weight:700;flex-shrink:0}
+h3{font-size:clamp(17px,1.5vw,20px);color:var(--secondary);margin:28px 0 8px}
+h4{font-size:16px;color:var(--text);margin:16px 0 6px;font-weight:600}
+p{margin-bottom:12px}
+p.lead{font-size:18px;color:var(--primary);font-weight:500;margin-bottom:16px;padding:12px 16px;background:rgba(15,42,74,0.04);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0}
+
+.card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 24px;margin-bottom:20px}
+.card h4{margin-top:0}
+
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:20px 0}
+.kpi{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;text-align:center}
+.kpi .num{font-size:28px;font-weight:700;color:var(--primary)}
+.kpi .num .unit{font-size:14px;color:var(--muted);font-weight:400}
+.kpi .label{font-size:13px;color:var(--muted);margin-top:2px}
+
+.case-card{border-left:4px solid var(--secondary);padding:16px 20px;margin:16px 0;background:#fff;border-radius:0 var(--radius) var(--radius) 0;box-shadow:var(--shadow)}
+.case-card .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:3px;background:var(--secondary);color:#fff;margin-bottom:6px}
+.case-card h4{margin-bottom:4px}
+
+.insight{background:rgba(201,169,97,0.08);border-left:4px solid var(--accent);padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:16px 0;font-size:15px}
+.insight strong{color:var(--primary)}
+
+.risk-warn{background:rgba(220,38,38,0.06);border-left:4px solid var(--danger);padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:16px 0;font-size:15px}
+.risk-warn strong{color:var(--danger)}
+
+.risk-caution{background:rgba(217,119,6,0.06);border-left:4px solid var(--warning);padding:12px 16px;border-radius:0 var(--radius) var(--radius) 0;margin:16px 0;font-size:15px}
+
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px}
+th{background:var(--primary);color:#fff;padding:10px 12px;text-align:left;font-weight:600}
+td{padding:8px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+tr:nth-child(even) td{background:rgba(15,42,74,0.02)}
+tr:hover td{background:rgba(15,42,74,0.06)}
+
+.quad{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:20px 0;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.quad-cell{padding:16px;background:#fff;min-height:100px}
+.quad-cell h5{font-size:14px;margin-bottom:4px;text-align:center}
+.quad-cell p{font-size:13px;color:var(--muted);text-align:center;margin:0}
+.quad .high-high{background:rgba(5,150,105,0.06);border-top:3px solid var(--success)}
+.quad .high-low{background:rgba(217,119,6,0.06);border-top:3px solid var(--warning)}
+.quad .low-high{background:rgba(46,94,140,0.06);border-top:3px solid var(--secondary)}
+.quad .low-low{background:rgba(107,114,128,0.06);border-top:3px solid var(--muted)}
+.quad-label{grid-column:1/-1;text-align:center;font-size:12px;color:var(--muted);padding:4px;background:#fff}
+
+.roadmap{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:20px 0}
+.phase{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;position:relative}
+.phase .phase-num{display:inline-block;font-size:12px;padding:2px 10px;border-radius:10px;background:var(--primary);color:#fff;margin-bottom:6px}
+.phase .phase-period{font-size:13px;color:var(--muted);margin-bottom:6px}
+.phase ul{font-size:14px;padding-left:16px}
+.phase ul li{margin-bottom:4px}
+
+.disclaimer{background:rgba(107,114,128,0.06);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin:24px 0;font-size:13px;color:var(--muted)}
+
+.framework{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0;align-items:flex-start}
+.fw-box{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:12px 16px;font-size:13px;text-align:center;min-width:120px;max-width:200px}
+.fw-box .fw-title{font-weight:600;color:var(--primary);font-size:14px}
+.fw-box .fw-desc{color:var(--muted);font-size:12px;margin-top:2px}
+.fw-box.fw-core{border:2px solid var(--accent);background:rgba(201,169,97,0.04)}
+.fw-box.fw-restrict{border:1px solid var(--danger);background:rgba(220,38,38,0.03)}
+.fw-box.fw-enable{border:1px solid var(--success);background:rgba(5,150,105,0.03)}
+.fw-arrow{font-size:22px;color:var(--accent);display:flex;align-items:center;padding:0 2px}
+.fw-bracket{display:flex;flex-direction:column;align-items:center;gap:8px;justify-content:center}
+
+.table-scroll{overflow-x:auto;margin:16px 0;-webkit-overflow-scrolling:touch;position:relative}
+.table-scroll::-webkit-scrollbar{height:6px}
+.table-scroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+
+.to-top{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border-radius:50%;background:var(--primary);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;opacity:0;transition:.3s}
+.to-top.show{opacity:.85}
+
+.ref-list{font-size:13px;color:var(--muted);padding:0;list-style:none}
+.ref-list li{margin-bottom:4px;padding-left:16px;position:relative}
+.ref-list li::before{content:"─";position:absolute;left:0;color:var(--accent)}
+
+.footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;font-size:13px;color:var(--muted)}
+
+@media(max-width:640px){
+  nav{padding:0 12px;gap:2px;-webkit-overflow-scrolling:touch}
+  nav a{font-size:13px;padding:10px 8px;min-height:36px;display:flex;align-items:center}
+  .hero{padding:60px 20px 36px;margin-top:52px}
+  .container{padding:0 14px}
+  section{padding:28px 0}
+  h2{font-size:22px;flex-wrap:wrap;gap:8px}
+  h2 .sec-num{width:28px;height:28px;font-size:13px}
+  h3{font-size:17px;margin:20px 0 6px}
+  p.lead{font-size:16px;padding:10px 12px}
+  .card{padding:14px 16px}
+  .case-card{padding:12px 14px;margin:12px 0}
+  .case-card .tag{font-size:12px;padding:3px 8px}
+  .insight,.risk-warn,.risk-caution{padding:10px 12px;font-size:14px;margin:12px 0}
+  .disclaimer{padding:14px;font-size:14px}
+  .kpi-row{grid-template-columns:repeat(2,1fr);gap:10px}
+  .kpi{padding:12px 8px}
+  .kpi .num{font-size:22px}
+  .kpi .label{font-size:12px}
+  .quad{grid-template-columns:1fr 1fr;gap:1px}
+  .quad-cell{padding:10px 8px;min-height:72px}
+  .quad-cell h5{font-size:12px}
+  .quad-cell p{font-size:11px}
+  .framework{flex-direction:column;align-items:stretch;gap:6px}
+  .fw-box{min-width:auto;max-width:none;width:100%;padding:10px 12px}
+  .fw-arrow{transform:rotate(90deg);padding:2px 0}
+  .fw-bracket{flex-direction:row;gap:6px}
+  .fw-bracket .fw-box{flex:1}
+  .roadmap{grid-template-columns:1fr;gap:12px}
+  .to-top{bottom:calc(16px + env(safe-area-inset-bottom,0px));right:calc(16px + env(safe-area-inset-right,0px));width:44px;height:44px}
+  table{font-size:13px}
+  th,td{padding:6px 8px}
+  .table-scroll::-webkit-scrollbar{height:6px}
+  .table-scroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+}
+</style>
+</head>
+<body>
+
+<nav id="top-nav">
+  <a href="#sec1">摘要</a>
+  <a href="#sec2">背景</a>
+  <a href="#sec3">法規</a>
+  <a href="#sec4">監理</a>
+  <a href="#sec5">國際</a>
+  <a href="#sec6">比較</a>
+  <a href="#sec7">啟示</a>
+  <a href="#sec8">行動</a>
+  <a href="#ref">來源</a>
+</nav>
+
+<div class="hero">
+  <h1>儲蓄互助社推動地方創生與青年創業之可行性研究</h1>
+  <p>台灣法規架構與國際標竿比較 — 探討《儲蓄互助社法》第九條第一項第七款之延伸應用</p>
+  <div class="meta">研究報告 · 2026 年 7 月</div>
+</div>
+
+<div class="container">
+
+<!-- ==================== 第一章 摘要 ==================== -->
+<section id="sec1">
+  <h2><span class="sec-num">1</span>摘要與結論</h2>
+  <p class="lead">以儲蓄互助社為載體推動「地方創生場域＋青年創業進駐＋行政服務收費」之模式，在法規上具有明文依據，在政策上獲得內政部試辦計畫背書，但在實務落地前須克服三個結構性摩擦點。</p>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="num">323 <span class="unit">社</span></div><div class="label">台灣儲互社總數（2023）</div></div>
+    <div class="kpi"><div class="num">22 <span class="unit">萬人</span></div><div class="label">全台社員總數</div></div>
+    <div class="kpi"><div class="num">118 <span class="unit">國</span></div><div class="label">WOCCU 會員國</div></div>
+    <div class="kpi"><div class="num">2.8 <span class="unit">億人</span></div><div class="label">全球儲互社社員</div></div>
+  </div>
+
+  <h3>核心發現</h3>
+
+  <div class="insight"><strong>✅ 法規具備依據</strong> — 《儲蓄互助社法》第 9 條第 1 項第 7 款明訂「參與社區營造，協助發展社區型產業」為儲互社之法定任務；第 4 項更預設儲互社在執行本項任務時會產生「貨物或勞務之銷售」，並為此設計了個別課稅機制。收取行政服務費在法律預期範圍內。</div>
+
+  <div class="insight"><strong>✅ 政策獲得支持</strong> — 內政部 111–112 年推動之「合作事業推動地方創生輔導試辦計畫」已明確將合作事業（含儲互社）定位為地方創生的適格組織型態，並提供育成輔導資源。</div>
+
+  <div class="risk-warn"><strong>⚠ 三大結構性摩擦</strong> — (1) 第 2 條「共同關係」限制：社員彼此間須有共同關係（如居住同一鄉鎮），從全國招募青年進駐可能違反此規定而導致社員資格無效；(2) 第 2 條「非營利社團法人」與第 15 條盈餘分配順序：收取之服務費盈餘不能直接分配給發起人，須依公積金 20% 以上、公益金及教育金 5% 之順序提撥；(3) 第 12 條「社員限定」原則：放款與股金服務僅限社員。</div>
+
+  <div class="insight"><strong>🌍 國際趨勢同步</strong> — 全球儲互社（Credit Union）在 WOCCU 領導下已普遍將社區發展納入核心業務。巴西 Sicredi 青年委員會、美國 CDFI（社區發展金融機構）制度、加拿大 Vancity 微型信貸、Filene 孵化器等案例均證明「儲互社＋青年創業＋社區發展」模式在國際上已規模化驗證。</div>
+
+  <h3>核心建議</h3>
+  <p>建議採取<strong>雙軌設計</strong>：以一般合作社（生產／勞動合作社）為主體經營地方創生場域並收取服務費，另以儲蓄互助社提供金融配套（小額放款、信用保證、儲蓄服務）給進駐青年。如此既可發揮儲互社第 9 條第 7 款之精神，又避免組織型態與實際業務間的本質錯配。</p>
+</section>
+
+<!-- ==================== 第二章 背景 ==================== -->
+<section id="sec2">
+  <h2><span class="sec-num">2</span>研究背景與問題意識</h2>
+
+  <h3>2.1 台灣地方創生政策脈絡</h3>
+  <p>行政院於 2019 年（民國 108 年）定為「台灣地方創生元年」，核心目標為發展地方產業、促進人口回流、繁榮地方，達成城鄉均衡發展。內政部隨即推出「合作事業推動地方創生輔導試辦計畫（111–112 年）」，明確指出：「合作社與所在社區的活動密切相關，適合作為地方創生之組織型態。」該計畫旨在育成合作事業，提供青年、婦女、原住民族、在地居民從事集體創業或經濟參與的選項。</p>
+
+  <h3>2.2 台灣儲蓄互助社現況</h3>
+  <p>台灣儲蓄互助社運動自 1960 年代起發展，至 2023 年底全台共有 323 個儲蓄互助社，社員超過 22 萬人，總資產規模逾新台幣 300 億元。《儲蓄互助社法》於 86 年制定，104 年重大修正，增訂第 7 條之 1（信用保證業務）及修正第 9 條任務清單，將「參與社區營造，協助發展社區型產業」正式納入法定任務。</p>
+
+  <h3>2.3 問題陳述</h3>
+  <p>本研究探討之具體構想如下：成立一個儲蓄互助社，打造地方創生場域（如創業聚落、共享工作空間、育成中心），引導青年進駐創業並加入為社員，該儲互社向進駐社員收取行政手續費或相關服務費，以支應場域營運成本。核心研究問題為：此類模式在《儲蓄互助社法》與實務查核上是否可行？若可行，對台灣儲互社體系之發展有何契機？</p>
+</section>
+
+<!-- ==================== 第三章 法規解析 ==================== -->
+<section id="sec3">
+  <h2><span class="sec-num">3</span>台灣法規深度解析</h2>
+
+  <h3>3.1 第 9 條任務清單：模式的核心依據</h3>
+  <p>《儲蓄互助社法》第 9 條第 1 項列舉儲蓄互助社之 11 項任務，以下為全文：</p>
+
+  <table>
+    <tr><th style="width:32px">款</th><th>任務內容</th></tr>
+    <tr><td>一</td><td>收受社員股金。</td></tr>
+    <tr><td>二</td><td>得為社員設備轉金帳戶。</td></tr>
+    <tr><td>三</td><td>辦理社員放款。</td></tr>
+    <tr><td>四</td><td>參加協會辦理之各項互助基金業務。</td></tr>
+    <tr><td>五</td><td>代理收受社員水電費、瓦斯費、學費、電話費、稅金、罰鍰及其他收付款項業務。</td></tr>
+    <tr><td>六</td><td>參加協會資金融通。</td></tr>
+    <tr style="background:rgba(201,169,97,0.12)"><td><strong>七</strong></td><td><strong>參與社區營造，協助發展社區型產業。</strong></td></tr>
+    <tr><td>八</td><td>參加協會辦理之各項合作事業型態之社會企業業務。</td></tr>
+    <tr><td>九</td><td>購買國家公債或金融商品。</td></tr>
+    <tr><td>十</td><td>接受政府或公益團體委託代辦事項。</td></tr>
+    <tr><td>十一</td><td>其他經中央主管機關核可之相關事項。</td></tr>
+  </table>
+
+  <div class="insight"><strong>🔑 關鍵條文</strong> — 第 9 條第 4 項：「儲蓄互助社執行第一項第七款、第八款及第十款任務，其銷售與非社員之貨物或勞務，應依所得稅法、加值型及非加值型營業稅法規定課徵所得稅及營業稅，不適用第八條規定。但政府委託其代辦之業務免徵營業稅。」<br><br>此項立法意旨極為重要：<strong>立法者已預見儲互社在社區營造過程中會對非社員銷售貨物或勞務（涵蓋行政手續費、服務費等），並為此設計了個別稅務處理。</strong>換言之，收取服務費本身並非法律所禁止或意外之行為，而是立法預期內的附隨商業活動。惟對非社員之銷售須課稅，不享有第 8 條之免稅優惠。</div>
+
+  <h3>3.2 第 2 條共同關係：最大的結構性限制</h3>
+  <div class="risk-warn"><strong>🚨 最關鍵的風險點</strong> — 第 2 條第 2 項：「本法所稱儲蓄互助社，係指……具共同關係之自然人及非營利法人所組成之非營利社團法人。」第 3 項：「前項所稱共同關係，乃指工作於同一公司、工廠或職業團體、或參加同一社團或宗教團體或原住民團體、或居住於同一鄉、鎮者。」第 4 項：「無共同關係而參加儲蓄互助社者無效。」<br><br>若地方創生場域招募之青年創業者來自全國各地且彼此不具共同關係，其社員資格將因違反第 2 條而<strong>自始無效</strong>。最可行的解決方案為以<strong>地理共同關係（居住同一鄉鎮）</strong>作為共同關係基礎；或將進駐創業者先組織為同一職業團體或社團，再以該團體為共同關係基礎。</div>
+
+  <h3>3.3 非營利性與盈餘分配限制</h3>
+  <p>第 2 條明定儲互社為「非營利社團法人」。第 15 條規定年度盈餘須依以下順序提撥或分配：(1) 彌補累積虧損、(2) 利息攤還、(3) 公積金 20% 以上、(4) 公益金及教育金 5%、(5) 社股股息。第 20 條規定理事、監事均為無給職且不得支領酬勞金。</p>
+  <p>以上規定共同構成強烈的<strong>非營利導向</strong>：服務費收入若有盈餘，不能直接分配給發起人或經營者，必須留在社內作為公積金、公益金或分配給全體社員作為股息。此設計與一般營利事業之商業模式有根本差異。</p>
+
+  <h3>3.4 法規架構圖</h3>
+  <div class="framework">
+    <div class="fw-box fw-core">
+      <div class="fw-title">第 9 條第 7 款</div>
+      <div class="fw-desc">核心授權：社區營造<br>發展社區型產業</div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-bracket">
+      <div class="fw-box fw-enable">
+        <div class="fw-title">第 9 條第 4 項</div>
+        <div class="fw-desc">預設銷售勞務<br>僅課稅、不禁止</div>
+      </div>
+      <div class="fw-box fw-enable">
+        <div class="fw-title">第 11 款</div>
+        <div class="fw-desc">經核可之<br>其他事項</div>
+      </div>
+    </div>
+    <div class="fw-arrow">→</div>
+    <div class="fw-bracket">
+      <div class="fw-box fw-restrict">
+        <div class="fw-title">第 2 條共同關係</div>
+        <div class="fw-desc">社員須有共同關係<br>否則資格無效</div>
+      </div>
+      <div class="fw-box fw-restrict">
+        <div class="fw-title">第 12 條</div>
+        <div class="fw-desc">不得對非社員<br>收股金及放款</div>
+      </div>
+      <div class="fw-box fw-restrict">
+        <div class="fw-title">第 15 / 20 條</div>
+        <div class="fw-desc">盈餘分配限制<br>理監事無給職</div>
+      </div>
+    </div>
+  </div>
+  <p style="text-align:center;font-size:13px;color:var(--muted)">▲ 法規互動關係：授權（金框）vs 限制（紅框）</p>
+</section>
+
+<!-- ==================== 第四章 監理與稅務 ==================== -->
+<section id="sec4">
+  <h2><span class="sec-num">4</span>監理實務與稅務面</h2>
+
+  <h3>4.1 雙層監理架構</h3>
+  <p>台灣儲蓄互助社採獨特的雙層監理制度：</p>
+  <div class="framework" style="flex-direction:column;align-items:stretch">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+      <div class="fw-box" style="border:2px solid var(--accent)">
+        <div class="fw-title">🏛 內政部（中央主管機關）</div>
+        <div class="fw-desc">核備協會內規、最終處分權、政策制定</div>
+      </div>
+      <div class="fw-arrow">⇅</div>
+      <div class="fw-box" style="border:2px solid var(--secondary)">
+        <div class="fw-title">🤝 中華民國儲蓄互助協會（CUA）</div>
+        <div class="fw-desc">直接監督、稽核、輔導、設立審核、訂定內規</div>
+      </div>
+      <div class="fw-arrow">⇅</div>
+      <div class="fw-box">
+        <div class="fw-title">🏢 各儲蓄互助社</div>
+        <div class="fw-desc">自主運作、接受協會稽核</div>
+      </div>
+    </div>
+  </div>
+
+  <h3>4.2 協會內規：實務可行性的真正裁判</h3>
+  <p>第 7 條第 2 項規定：「前項設立、管理、監督與輔導辦法由協會定之，並送中央主管機關核備。」這意味著：<strong>具體的業務範圍認定、核准與否的裁量權，實際上掌握在中華民國儲蓄互助協會手上。</strong>該協會訂有《儲蓄互助社設立輔導管理與監督辦法》（90 年內政部核備），為所有儲互社的業務邊界提供了操作性的判斷基準。建議在規劃初期即正式函詢協會，取得其對新模式之意見。</p>
+
+  <h3>4.3 違規罰則</h3>
+  <table>
+    <tr><th>違規行為</th><th>罰則</th><th>法源</th></tr>
+    <tr><td>經營未經核准之業務項目（違反第 9 條）</td><td>罰鍰 6–30 萬元</td><td>第 33 條第 1 項第 1 款</td></tr>
+    <tr><td>對非社員收受股金及放款</td><td>罰鍰 6–30 萬元</td><td>第 33 條第 1 項第 3 款</td></tr>
+    <tr><td>支付理監事酬勞金</td><td>罰鍰 6–30 萬元</td><td>第 33 條第 1 項第 7 款</td></tr>
+    <tr><td>與前條法定業務衝突</td><td>警告至命令解散等六種處分</td><td>第 29 條</td></tr>
+  </table>
+
+  <h3>4.4 稅務分析</h3>
+  <p>第 8 條規定依本法設立之儲蓄互助社依法經營者免徵所得稅及營業稅。然而第 9 條第 4 項對此設有重要例外：<strong>執行社區營造（第 7 款）、社會企業（第 8 款）、政府委託代辦（第 10 款）時，若對非社員銷售貨物或勞務，須依所得稅法及營業稅法課稅。</strong>具體而言：</p>
+  <ul style="margin-bottom:12px">
+    <li>對社員收取之服務費 → 屬互助合作範圍，原則上適用第 8 條免稅。</li>
+    <li>對非社員收取之費用 → 須個別申報課徵所得稅及營業稅。</li>
+    <li>政府委託代辦業務 → 免營業稅（第 9 條第 4 項但書）。</li>
+  </ul>
+  <p>實務上需注意：若場域同時服務社員與非社員，帳務須明確區分，避免稅務爭議。</p>
+
+  <h3>4.5 政府政策支持</h3>
+  <div class="insight"><strong>📍 重要政策資源</strong> — 內政部「合作事業推動地方創生輔導試辦計畫（111–112 年）」之核心目標為「建立合作社輔導機制，協助育成與強化組織功能」及「扶植合作社典範，提供民眾不同的經濟參與選項」。該計畫明確將合作社組織定位為地方創生之適格主體，並提供育成輔導資源。此為台灣目前最直接對應本研究模式之政策性支持架構。</div>
+</section>
+
+<!-- ==================== 第五章 國際標竿 ==================== -->
+<section id="sec5">
+  <h2><span class="sec-num">5</span>國際標竿深度研究</h2>
+  <p class="lead">全球儲互社（Credit Union）涵蓋 118 國、超過 2.8 億社員，管理資產總額逾 3.2 兆美元。WOCCU（世界信用合作社理事會）在聯合國 UN DESA 專家會議中明確指出：儲互社是推動金融包容與社區發展的關鍵行動者。以下四大案例分別代表不同的制度化路徑。</p>
+
+  <h3>5.1 巴西 Sicredi 青年委員會</h3>
+  <div class="case-card">
+    <span class="tag">🇧🇷 巴西 · WOCCU 認證典範</span>
+    <h4>Youth Committees（青年委員會）模式</h4>
+    <p>Sicredi 為巴西第二大合作金融體系，會員超過 600 萬人，其「青年委員會」被 WOCCU 列為國際重點研究案例。</p>
+    <p><strong>運作機制：</strong>青年委員會將合作教育、理財教育、創業輔導、專業發展與社區服務整合為單一平台。青年透過委員會參與社區發展專案，Sicredi 從中培育潛在創業者與忠誠社員。其設計邏輯為「吸引青年→賦權青年→使青年成為合作事業的代言人與創業者」。</p>
+    <p><strong>對台啟示：</strong>此模式證明「引導青年進駐＋加入為社員＋結合創業輔導」在國際上已被 WAOCCU 視為戰略級做法。可移植要素包括青年委員會的制度設計與教育訓練模組；但巴西的「共同關係」定義較寬鬆，台灣須注意第 2 條的嚴格限制。</p>
+  </div>
+
+  <h3>5.2 美國 CDFI 制度與 HOPE Credit Union</h3>
+  <div class="case-card">
+    <span class="tag">🇺🇸 美國 · 聯邦制度化版本</span>
+    <h4>CDFI Fund + Community Charter 雙軌配套</h4>
+    <p>美國財政部轄下設有 CDFI Fund（社區發展金融機構基金），對社區發展導向之金融機構（含儲互社）提供認證與聯邦補助。超過 1,000 家 CDFI 獲認證，可申請聯邦資金（需對等民間資金）以對弱勢社區提供金融服務。此為全球最完整的社區發展金融制度基礎建設。</p>
+    <p><strong>NCUA 三種特許狀制度：</strong>美國聯邦儲互社監理機關 NCUA 允許三種共同關係型態：(1) Single common bond（單一雇主或協會）、(2) Multiple common bond（多重群體）、(3) <strong>Community charter（社區特許狀）</strong>— 以地理區域為會員範圍。此制度即為台灣「共同關係」議題提供了可能的演化方向。</p>
+    <p><strong>指標案例 — HOPE Credit Union：</strong>營運於美國南方貧困帶（Deep South）之 CDFI 儲互社，其社區發展業務目標包括：激勵創業與商業發展、促進中低收入者資產累積、增加可負擔住宅機會、強化基礎設施。HOPE 同時設有「HOPE Policy Institute」將實務經驗反饋政策制定者，形成實務與政策的循環。</p>
+    <p><strong>對台啟示：</strong>台灣目前無 CDFI 制度，但可參考其「政府認證＋聯邦補助」的雙軌設計，透過內政部試辦計畫獲得類似資源。NCUA 的 Community charter 變革歷程（從嚴格共同關係逐步放寬至地理社區）可作為台灣未來修法參考。</p>
+  </div>
+
+  <h3>5.3 加拿大 Vancity 微型信貸</h3>
+  <div class="case-card">
+    <span class="tag">🇨🇦 加拿大 · 微型信貸模式</span>
+    <h4>Vancity Credit Union Microcredit Program</h4>
+    <p>Vancity 為加拿大最大英語區儲蓄互助社，資產規模逾 300 億加幣。其微型信貸計畫專注於：(1) 無法從傳統銀行取得融資的社區小型企業與社會事業、(2) 永續發展事業。Vancity 將微型貸款與技術協助（technical assistance）結合，形成「資金＋輔導」的雙軌支持。</p>
+    <p><strong>對台啟示：</strong>Vancity 的「技術協助」元素與本模式的「創業輔導＋服務收費」有高度可類比性。台灣儲互社可參考其貸款搭配輔導之設計，將服務費定位為技術協助費而非單純行政規費。</p>
+  </div>
+
+  <h3>5.4 Filene Research Institute 孵化器</h3>
+  <div class="case-card">
+    <span class="tag">🇺🇸 美國 · 智庫驅動</span>
+    <h4>Racial Economic Equity Incubator</h4>
+    <p>Filene Research Institute 為美國儲互社產業權威智庫，其營運的孵化器計畫（Incubator）招募全國儲互社參與，共創解決方案以推動社區經濟平權。最新一期計畫選出 8 家儲互社進入孵化器，提供資源、支持與資本以服務有色人種社區。</p>
+    <p>CreditUnions.com 對此模式的評論精準概括了您的構想：<strong>「對儲互社而言，孵化器是服務在地創業家、並接觸懂科技的年輕新社員的途徑。」</strong></p>
+    <p><strong>對台啟示：</strong>此模式證明「儲互社營運創業孵化器」在國際上已有制度化先例，且被視為吸引年輕社員的戰略手段。台灣尚無類似 Filene 的合作事業智庫，值得產官學界思考建立。</p>
+  </div>
+</section>
+
+<!-- ==================== 第六章 跨國比較 ==================== -->
+<section id="sec6">
+  <h2><span class="sec-num">6</span>跨國比較與定位矩陣</h2>
+
+  <h3>6.1 制度比較表</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th>比較維度</th><th>🇹🇼 台灣</th><th>🇧🇷 巴西</th><th>🇺🇸 美國</th><th>🇨🇦 加拿大</th></tr>
+    <tr>
+      <td><strong>共同關係制度</strong></td>
+      <td>嚴格（同鄉鎮/同職業團體）</td>
+      <td>社區基礎（相對寬鬆）</td>
+      <td>3 種特許狀（含社區 charter）</td>
+      <td>社區基礎（州法差異）</td>
+    </tr>
+    <tr>
+      <td><strong>社區發展法定任務</strong></td>
+      <td>✓ 第 9 條第 7 款</td>
+      <td>✓ 核心使命</td>
+      <td>✓ CDFI 認證制度</td>
+      <td>✓ 核心使命</td>
+    </tr>
+    <tr>
+      <td><strong>對非社員銷售勞務</strong></td>
+      <td>允許（須課稅）</td>
+      <td>允許</td>
+      <td>允許</td>
+      <td>允許</td>
+    </tr>
+    <tr>
+      <td><strong>政府配套制度</strong></td>
+      <td>內政部試辦計畫（有限）</td>
+      <td>合作金融法體系</td>
+      <td>CDFI Fund（聯邦補助）</td>
+      <td>省級合作金融法規</td>
+    </tr>
+    <tr>
+      <td><strong>青年創業專案實績</strong></td>
+      <td>尚無顯著案例</td>
+      <td>Sicredi Youth Committees</td>
+      <td>Filene Incubator、HOPE CU</td>
+      <td>Vancity Microcredit</td>
+    </tr>
+    <tr>
+      <td><strong>資產規模 / 滲透率</strong></td>
+      <td>323 社、22 萬社員</td>
+      <td>600 萬+ 社員</td>
+      <td>5,000+ 社、1.4 億社員</td>
+      <td>700+ 社、600 萬社員</td>
+    </tr>
+    <tr>
+      <td><strong>共同關係演化階段</strong></td>
+      <td>未修法放寬</td>
+      <td>已放寬</td>
+      <td>已放寬至社區 charter</td>
+      <td>已放寬</td>
+    </tr>
+  </table>
+  </div>
+
+  <h3>6.2 監理彈性與社區發展強度定位矩陣</h3>
+  <p style="font-size:14px;color:var(--muted);text-align:center">縱軸：共同關係制度之彈性（嚴格→寬鬆） · 橫軸：社區發展制度化程度（低→高）</p>
+  <div class="quad">
+    <div class="quad-cell low-high">
+      <h5>🔸 高彈性．低制度</h5>
+      <p>多數開發中國家儲互社<br>（機會多、規範少）</p>
+    </div>
+    <div class="quad-cell high-high">
+      <h5>✅ 高彈性．高制度</h5>
+      <p><strong>美國（CDFI + 社區 charter）<br>巴西（Sicredi）<br>加拿大（Vancity）</strong></p>
+    </div>
+    <div class="quad-cell low-low">
+      <h5>🔹 低彈性．低制度</h5>
+      <p>台灣儲互社現狀<br>（法條授權但配套不足）</p>
+    </div>
+    <div class="quad-cell high-low">
+      <h5>⚠ 低彈性．高制度</h5>
+      <p>理論上可能但<br>現實中少見</p>
+    </div>
+    <div class="quad-label">⬅ 監理彈性 →</div>
+    <div class="quad-label">⬆ 社區發展制度化 ⬆</div>
+  </div>
+  <div class="insight"><strong>定位分析：</strong>台灣目前位於「左下象限」（低彈性、低制度），但正朝右上方移動——第 9 條第 7 款提供了法規授權，內政部試辦計畫提供了初期資源。若能透過修法放寬共同關係、或透過協會內規創設類似社區 charter 的機制，即可向右上方推進至國際主流位置。</div>
+</section>
+
+<!-- ==================== 第七章 啟示與建議 ==================== -->
+<section id="sec7">
+  <h2><span class="sec-num">7</span>對台灣之啟示與操作建議</h2>
+
+  <h3>7.1 三大可借鏡點</h3>
+  <div class="case-card">
+    <h4>① 美國 CDFI 制度：從嚴格共同關係到社區特許狀</h4>
+    <p>美國 NCUA 在數十年內逐步放寬共同關係限制，發展出「社區特許狀」制度，讓儲互社得以地理區域為會員範圍。台灣《儲蓄互助社法》第 2 條第 3 項已將「居住同一鄉、鎮」列為共同關係類型，為社區型儲互社提供了法規基礎，惟實務上尚無大規模以地理社區為共同關係的案例。建議以修法或協會內規解釋方式，明確化社區型儲互社之運作空間。</p>
+  </div>
+  <div class="case-card">
+    <h4>② 巴西 Sicredi：青年委員會的設計邏輯</h4>
+    <p>Sicredi 的青年委員會同時涵蓋合作教育、理財教育、創業輔導與社區服務，形成完整的青年賦權循環。台灣可引進此套制度框架，惟須注意：台灣儲互社規模普遍較小（多數在 500 名社員以下），青年委員會的運作成本可能需要跨社合作或由協會統一推動方能分攤。</p>
+  </div>
+  <div class="case-card">
+    <h4>③ 加拿大 Vancity：貸款＋技術協助的雙軌模式</h4>
+    <p>Vancity 將微型信貸與創業技術協助綁定，此為台灣模式的「服務收費」提供了更精確的市場定位——將收費定位為創業輔導／技術協助費，而非單純行政規費，在合作社精神與商業可行性之間取得平衡。</p>
+  </div>
+
+  <h3>7.2 組織型態選擇：儲互社 vs 一般合作社 vs 雙軌</h3>
+  <p>以下為三種組織方案的比較：</p>
+  <div class="table-scroll">
+  <table>
+    <tr><th>評估面向</th><th>儲蓄互助社</th><th>一般合作社</th><th>雙軌設計（建議方案）</th></tr>
+    <tr>
+      <td><strong>法定本業</strong></td>
+      <td>金融（儲蓄／放款）</td>
+      <td>生產／勞動／消費等實體經濟</td>
+      <td>各司其職</td>
+    </tr>
+    <tr>
+      <td><strong>社區營造適配度</strong></td>
+      <td>附帶任務（第 9 條第 7 款）</td>
+      <td>可直接作為主業</td>
+      <td>合作社為主、儲互社配套</td>
+    </tr>
+    <tr>
+      <td><strong>共同關係限制</strong></td>
+      <td>嚴格（同鄉鎮／同職業）</td>
+      <td>相對寬鬆</td>
+      <td>依各自法規處理</td>
+    </tr>
+    <tr>
+      <td><strong>免稅待遇</strong></td>
+      <td>✓ 第 8 條（但對非社員銷售須課稅）</td>
+      <td>✗</td>
+      <td>儲互社部分享免稅</td>
+    </tr>
+    <tr>
+      <td><strong>對青年創業者之價值</strong></td>
+      <td>低利放款、儲蓄服務</td>
+      <td>共同經營、共享資源</td>
+      <td>全方位金融＋營運支持</td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="insight"><strong>🏆 推薦方案：雙軌設計</strong><br><strong>主體：一般合作社</strong>（勞動合作社或生產合作社型態）— 負責營運地方創生場域、收納青年創業者為社員、收取行政服務費、提供共享資源與創業輔導。<br><strong>配套：儲蓄互助社</strong> — 為進駐之青年創業者（同時也是合作社社員）提供小額放款、儲蓄服務、信用保證等金融服務，發揮第 9 條第 7 款及第 7 條之 1 信用保證之功能。<br>此設計既避開儲互社「共同關係」之限制，又能讓儲互社回歸其金融本業，同時以實質方式參與社區營造。</div>
+
+  <h3>7.3 五大風險與紅線</h3>
+  <div class="risk-warn"><strong>🔴 紅線 1：共同關係失效</strong> — 若招募之創業者不具備共同關係，社員資格自始無效（第 2 條第 4 項）。<br><strong>解決方案：</strong>以居住同一鄉鎮為共同關係基礎，或先將創業者組織為社團再申請設立。</div>
+  <div class="risk-warn"><strong>🔴 紅線 2：盈餘私人分配</strong> — 服務費盈餘不能直接分配給發起人或經營者（第 15 條、第 20 條）。<br><strong>解決方案：</strong>盈餘依優先順序提撥公積金與公益金，經營者之報酬須另以僱傭或委任契約處理，不得從盈餘直接分配。</div>
+  <div class="risk-caution"><strong>🟡 風險 3：未經核准之業務項目</strong> — 若協會認定新模式不屬於核准業務，可處 6–30 萬元罰鍰（第 33 條）。<br><strong>解決方案：</strong>模式啟動前先正式函詢協會取得見解。</div>
+  <div class="risk-caution"><strong>🟡 風險 4：稅務區分不清</strong> — 對社員與非社員之服務費若帳務混淆，可能引發稅務爭議（第 9 條第 4 項）。<br><strong>解決方案：</strong>設立獨立帳戶，明確區分社員／非社員交易。</div>
+  <div class="risk-caution"><strong>🟡 風險 5：組織本質錯配</strong> — 以金融儲互社主導實體育成場域，業務本質與組織法定職能不匹配。<br><strong>解決方案：</strong>採用雙軌設計，讓儲互社回歸金融角色。</div>
+</section>
+
+<!-- ==================== 第八章 行動藍圖 ==================== -->
+<section id="sec8">
+  <h2><span class="sec-num">8</span>行動藍圖與下一步</h2>
+
+  <div class="roadmap">
+    <div class="phase">
+      <div class="phase-num">短期 1–3 月</div>
+      <div class="phase-period">法規確認與內規研究</div>
+      <ul>
+        <li>正式函詢中華民國儲蓄互助協會（CUA），檢附具體商業模式說明，請求協會就法規面提供正式見解</li>
+        <li>取得並逐條解讀《儲蓄互助社設立輔導管理與監督辦法》全文</li>
+        <li>向內政部合作及人民團體司洽詢地方創生試辦計畫資源</li>
+        <li>蒐集雙軌設計所需之合作社法規資訊</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-num">中期 3–6 月</div>
+      <div class="phase-period">模式驗證與組織設計</div>
+      <ul>
+        <li>委請熟悉合作金融之律師，進行組織型態比較與章程設計</li>
+        <li>決定組織路徑：純儲互社方案、純合作社方案、或雙軌方案</li>
+        <li>起草章程與營運計畫書</li>
+        <li>評估進駐創業者的共同關係方案</li>
+        <li>評估稅務影響與帳務設計</li>
+      </ul>
+    </div>
+    <div class="phase">
+      <div class="phase-num">長期 6–12 月</div>
+      <div class="phase-period">籌組設立與試行</div>
+      <ul>
+        <li>依選定路徑向協會申請設立或變更</li>
+        <li>辦理設立登記（內政部／地方政府）</li>
+        <li>試行運作小規模場域（如 5–10 位創業者）</li>
+        <li>建立社員／非社員帳務區分機制與稅務申報流程</li>
+        <li>定期檢討模式並回饋協會與內政部</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>關鍵諮詢資源</h3>
+  <div class="table-scroll">
+  <table>
+    <tr><th>單位</th><th>諮詢事項</th><th>聯絡管道</th></tr>
+    <tr><td>中華民國儲蓄互助協會（CUA）</td><td>新模式可行性、內規解釋、設立程序</td><td>官網：culroc.org.tw</td></tr>
+    <tr><td>內政部合作及人民團體司</td><td>地方創生試辦計畫、合作事業政策</td><td>官網：cooptw.moi.gov.tw</td></tr>
+    <tr><td>熟悉合作金融之律師</td><td>組織型態選擇、章程設計、稅務規劃</td><td>建議諮詢合作社法與非營利組織法領域律師</td></tr>
+    <tr><td>縣市政府社會局／合作行政單位</td><td>地方層級登記與監督</td><td>各縣市政府社會局人民團體科</td></tr>
+  </table>
+  </div>
+</section>
+
+<!-- ==================== 附錄 ==================== -->
+<section id="ref">
+  <h2><span class="sec-num">附</span>資料來源與免責聲明</h2>
+
+  <h3>主要引用法規</h3>
+  <ul class="ref-list">
+    <li>《儲蓄互助社法》（104.02.04 修正公布，內政部主管法規共用系統 FL002696）</li>
+    <li>《儲蓄互助社設立輔導管理與監督辦法》（90.01.19 內政部核備）</li>
+    <li>《合作社法》</li>
+  </ul>
+
+  <h3>官方文件與資料庫</h3>
+  <ul class="ref-list">
+    <li>內政部「合作事業推動地方創生輔導試辦計畫（111–112 年）」計畫介紹（moi.gov.tw/cp.aspx?n=17473）</li>
+    <li>內政部合作事業入口網（cooptw.moi.gov.tw）</li>
+    <li>法務部行政函釋—儲蓄互助社法解釋（mojlaw.moj.gov.tw）</li>
+    <li>全國法規資料庫（law.moj.gov.tw）</li>
+  </ul>
+
+  <h3>國際組織與外國政府</h3>
+  <ul class="ref-list">
+    <li>World Council of Credit Unions (WOCCU) — woccu.org</li>
+    <li>National Credit Union Administration (NCUA) — ncua.gov（Field of Membership, Community Charter 章節）</li>
+    <li>US CDFI Fund — cdfifund.gov</li>
+    <li>Filene Research Institute — filene.org</li>
+    <li>CreditUnions.com — Incubator 系列報導</li>
+    <li>HOPE Credit Union — hopecu.org</li>
+    <li>WOCCU Sicredi Youth Committee Initiative 報告</li>
+  </ul>
+
+  <h3>學術與實務文獻</h3>
+  <ul class="ref-list">
+    <li>「儲蓄互助社的社區服務」— 華藝線上圖書館（airitilibrary.com）</li>
+    <li>「從普惠金融觀點探討資產累積方案—以儲蓄互助社模式為例」— 社區發展季刊第 190 期，衛生福利部社會及家庭署</li>
+    <li>「儲蓄互助社在台灣：深耕社區 創新續航」— 台灣主婦聯盟生活消費合作社</li>
+    <li>「儲蓄互助社是減緩青年貧窮的良方」— 專訪中華民國儲蓄互助協會康建民組長</li>
+  </ul>
+
+  <div class="disclaimer">
+    <strong>免責聲明</strong><br><br>
+    本研究報告基於公開資料整理與分析，僅供學術研究與政策討論參考，不構成法律意見或具體建議。<br><br>
+    文中涉及《儲蓄互助社法》之解釋，係基於法條文義與學理分析，如與主管機關或協會之正式解釋有所出入，應以主管機關或協會之見解為準。<br><br>
+    任何具體之商業模式規劃、組織設立或業務範圍認定，建議諮詢專業律師並向主管機關（中華民國儲蓄互助協會、內政部合作及人民團體司）取得正式函釋後再行推動。<br><br>
+    研究日期：2026 年 7 月 · 作者：基於公開資料之自主研究
+  </div>
+
+</section>
+
+<div class="footer">
+  <p>儲蓄互助社推動地方創生與青年創業之可行性研究 — 台灣法規架構與國際標竿比較</p>
+  <p>© 2026 · 本報告基於公開資料整理，可自由引用，請註明出處</p>
+</div>
+
+</div><!-- /container -->
+
+<button class="to-top" id="toTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+const nav = document.getElementById('top-nav');
+const sections = document.querySelectorAll('section[id]');
+const toTop = document.getElementById('toTop');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  });
+  nav.querySelectorAll('a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+  toTop.classList.toggle('show', window.scrollY > 400);
+});
+</script>
+
+</body>
+</html>
