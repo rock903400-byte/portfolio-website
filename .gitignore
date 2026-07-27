@@ -1,6 +1,7 @@
 # Ignore all subdirectories (other projects)
 /*/
 !/cu-localrevival-report/
+!/coop-vs-company-report/
 
 # System / IDE
 .clasp.json
