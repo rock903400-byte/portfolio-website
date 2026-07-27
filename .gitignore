@@ -1,7 +1,6 @@
 # Ignore all subdirectories (other projects)
+# 研究報告改由 Cloudflare Pages 部署，不隨 GitHub Pages 上線
 /*/
-!/cu-localrevival-report/
-!/coop-vs-company-report/
 
 # System / IDE
 .clasp.json
