@@ -1,4 +1,7 @@
-# Portfolio Website（已搬遷）
+# Portfolio Website（已遷移）
+
+[![Deploy](https://github.com/rock903400-byte/portfolio-website/actions/workflows/pages.yml/badge.svg)](https://github.com/rock903400-byte/portfolio-website/actions/workflows/pages.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 > 本作品集已搬遷至 **https://rock903400-byte.github.io/wind/**
 
