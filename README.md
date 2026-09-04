@@ -3,9 +3,9 @@
 [![Deploy](https://github.com/rock903400-byte/portfolio-website/actions/workflows/pages.yml/badge.svg)](https://github.com/rock903400-byte/portfolio-website/actions/workflows/pages.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> 本作品集已搬遷至 **https://rock903400-byte.github.io/wind/**
+> 本作品集已搬遷至 **https://wind.rock903400.workers.dev/**（備援鏡像：https://rock903400-byte.github.io/wind/）
 
-舊網址 `rock903400-byte.github.io/portfolio-website/` 保留自動轉址，
+舊網址 `rock903400-byte.github.io/portfolio-website/` 保留自動轉址到主站，
 既有連結不會失效，但不再更新內容。新站請見 [rock903400-byte/wind](https://github.com/rock903400-byte/wind)。
 
 ## 這個 repo 現在剩下什麼
