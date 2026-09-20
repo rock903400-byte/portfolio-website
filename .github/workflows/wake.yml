@@ -1,0 +1,49 @@
+name: Streamlit Keepalive
+
+# 每 4 小時用真瀏覽器巡一次 5 個 *.streamlit.app, 睡著就按喚醒鈕.
+# 純 HTTP ping 不會醒 (只拿到靜態殼), 所以用 Playwright + Chromium.
+# 公開 repo 的 Actions 免費. 手動觸發: Actions 分頁 -> Run workflow.
+on:
+  schedule:
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: streamlit-keepalive
+  cancel-in-progress: true
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-chromium-1.60-${{ runner.os }}
+          restore-keys: |
+            playwright-chromium-
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Wake Streamlit apps
+        run: python scripts/keepalive.py
+        env:
+          # 可選: 在 repo Secrets 加 STREAMLIT_APP_URLS (逗號分隔) 來覆蓋 scripts/urls.txt
+          STREAMLIT_APP_URLS: ${{ secrets.STREAMLIT_APP_URLS }}

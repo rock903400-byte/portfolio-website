@@ -1,0 +1,8 @@
+# Streamlit 保活名單（每行一個 URL，# 開頭為註解）
+# 2026-09-20 已實測：3 個皆 live（OK / WAKE_OK）。
+https://cu-analysis-v1-vizgphhwjwmfkvrrktdjte.streamlit.app
+https://cu-analysis-cz3xuj9tu52zsfxchmky4y.streamlit.app
+https://wind-report-generator-demo.streamlit.app
+# report-generator 正式版：官方 README 寫明線上 Demo 即上面 demo URL，不另加。
+# cu-ledger-audit-demo：查無部署（repo 無 homepage、README 無 URL），部署後再加一行：
+# https://YOUR-CU-LEDGER-AUDIT-DEMO.streamlit.app
