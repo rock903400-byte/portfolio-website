@@ -4,6 +4,8 @@
 # 保活器例外: 中央 keepalive 需進版控 (Actions 用)
 !/scripts/
 !/.github/
+# 聖母社網站需進版控 + Cloudflare Pages 部署
+!/cu-shengmu-site/
 
 # System / IDE
 .clasp.json
