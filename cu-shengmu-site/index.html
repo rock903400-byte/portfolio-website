@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>嘉義縣聖母儲蓄互助社 - 簡介與社員福利</title>
   <meta name="description" content="嘉義縣聖母儲蓄互助社，創社於民國56年(已歷經60年)，隸屬中華民國儲蓄互助協會(由內政部管理)。非為營利、非為救濟、乃是服務。提供小額儲蓄、股息分紅、人壽儲蓄互助基金、貸款安全互助基金、就學與青年創業貸款。">
+  <link rel="canonical" href="https://cu-shengmu-site.pages.dev/">
+  <meta name="theme-color" content="#155e75">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23155e75'/%3E%3Ctext x='50' y='66' font-size='48' text-anchor='middle' fill='white' font-family='sans-serif'%3E%E8%81%96%3C/text%3E%3C/svg%3E">
   
   <!-- 社群分享 Meta 標籤 (LINE / Facebook) -->
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cu-shengmu-site.pages.dev/">
   <meta property="og:title" content="嘉義縣聖母儲蓄互助社 - 簡介與社員福利">
   <meta property="og:description" content="非為營利、非為救濟、乃是服務 ｜ 透過「我為人人，人人為我」的互助精神改善經濟生活">
   <meta property="og:locale" content="zh_TW">
@@ -391,6 +395,13 @@
       transform: translateY(-1px);
     }
 
+    .pdf-link:focus-visible,
+    .mobile-btn:focus-visible,
+    .contact-item-box a:focus-visible {
+      outline: 3px solid rgba(124, 58, 237, 0.55);
+      outline-offset: 2px;
+    }
+
     .pdf-link svg {
       width: 20px;
       height: 20px;
@@ -512,7 +523,7 @@
     }
 
     .faq-item.active .faq-answer {
-      max-height: 450px;
+      max-height: 800px;
       padding: 14px 22px 20px;
       border-top: 1px solid #f1f5f9;
     }
