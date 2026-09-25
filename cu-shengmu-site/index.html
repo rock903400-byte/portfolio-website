@@ -15,6 +15,29 @@
   <meta property="og:title" content="嘉義縣聖母儲蓄互助社 - 簡介與社員福利">
   <meta property="og:description" content="非為營利、非為救濟、乃是服務 ｜ 透過「我為人人，人人為我」的互助精神改善經濟生活">
   <meta property="og:locale" content="zh_TW">
+  <meta property="og:image" content="https://cu-shengmu-site.pages.dev/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="嘉義縣聖母儲蓄互助社：非為營利、非為救濟、乃是服務">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "name": "嘉義縣聖母儲蓄互助社",
+    "url": "https://cu-shengmu-site.pages.dev/",
+    "telephone": "+886-5-379-2704",
+    "foundingDate": "1967",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "文明路1-9號",
+      "addressLocality": "朴子市",
+      "addressRegion": "嘉義縣",
+      "addressCountry": "TW"
+    }
+  }
+  </script>
 
   <style>
     :root {
@@ -334,7 +357,7 @@
     }
 
     .benefit-card p {
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #334155;
       line-height: 1.68;
     }
@@ -346,11 +369,10 @@
       border: 1px solid rgba(217, 119, 6, 0.3);
       padding: 2px 7px;
       border-radius: 5px;
-      font-size: 0.78rem;
+      font-size: 0.85rem;
       font-weight: 700;
       margin-left: 4px;
       vertical-align: 1px;
-      white-space: nowrap;
     }
 
     .highlight-tag.green {
@@ -396,6 +418,7 @@
     }
 
     .pdf-link:focus-visible,
+    .faq-question:focus-visible,
     .mobile-btn:focus-visible,
     .contact-item-box a:focus-visible {
       outline: 3px solid rgba(124, 58, 237, 0.55);
@@ -418,13 +441,13 @@
     }
 
     .pdf-link .pdf-text small {
-      font-size: 0.78rem;
+      font-size: 0.85rem;
       font-weight: 500;
       color: #64748b;
     }
 
     .pdf-link .pdf-open {
-      font-size: 0.78rem;
+      font-size: 0.85rem;
       font-weight: 800;
       color: #7c3aed;
       white-space: nowrap;
@@ -458,11 +481,8 @@
     }
 
     .faq-question {
-      width: 100%;
-      text-align: left;
+      list-style: none;
       padding: 18px 22px;
-      background: none;
-      border: none;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -471,6 +491,10 @@
       color: var(--text-main);
       cursor: pointer;
       gap: 12px;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
     }
 
     .faq-question .faq-q-text {
@@ -503,14 +527,12 @@
     }
 
     .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
       background: #fafbfc;
-      font-size: 0.95rem;
+      font-size: 1rem;
       color: #475569;
       line-height: 1.75;
-      padding: 0 22px;
+      padding: 14px 22px 20px;
+      border-top: 1px solid #f1f5f9;
     }
 
     .faq-answer ul {
@@ -522,13 +544,7 @@
       margin-bottom: 6px;
     }
 
-    .faq-item.active .faq-answer {
-      max-height: 800px;
-      padding: 14px 22px 20px;
-      border-top: 1px solid #f1f5f9;
-    }
-
-    .faq-item.active .toggle-icon {
+    .faq-item[open] .toggle-icon {
       transform: rotate(45deg);
     }
 
@@ -638,7 +654,7 @@
 
     .footer-note {
       font-size: 0.85rem;
-      color: #94a3b8;
+      color: #64748b;
       margin-top: 20px;
     }
 
@@ -737,6 +753,24 @@
       }
     }
 
+    /* ═══════════ 減少動態效果 (Reduced Motion) ═══════════ */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+
+      .benefit-card:hover,
+      .pdf-link:hover,
+      .contact-item-box:hover,
+      .mobile-btn:active {
+        transform: none;
+      }
+    }
+
     /* ═══════════ 列印專用樣式 (Print Optimization) ═══════════ */
     @media print {
       body {
@@ -776,7 +810,7 @@
     <!-- ═══════════ 頂部資訊區 (Header) ═══════════ -->
     <header class="header-card">
       <div class="header-badge-top">
-        <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+        <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 21h18M3 10h18M5 10v11M9 10v11M15 10v11M19 10v11M12 2L2 7h20L12 2z"/>
         </svg>
         <span>創社：民國56年（已歷經60年）</span>
@@ -786,14 +820,14 @@
       
       <div class="meta-badges">
         <span class="meta-badge-item">
-          <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="10"/>
             <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
           隸屬：中華民國儲蓄互助協會（由內政部管理）
         </span>
         <span class="meta-badge-item">
-          <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
           全台共15個區會，316個儲蓄互助社（68%為平地社，32%為山地社）
@@ -801,11 +835,12 @@
       </div>
     </header>
 
+    <main>
     <!-- ═══════════ 關於儲蓄互助社 ═══════════ -->
     <section class="intro-card">
       <h2 class="section-title">
         <span class="title-icon-box" aria-hidden="true">
-          <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
           </svg>
@@ -821,7 +856,7 @@
     <section>
       <h2 class="section-title">
         <span class="title-icon-box" aria-hidden="true">
-          <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
           </svg>
         </span>
@@ -835,7 +870,7 @@
           <div class="card-header">
             <span class="num-tag">1</span>
             <div class="icon-bubble blue" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="12" cy="12" r="8"/>
                 <path d="M12 8v8M9.5 10a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-2.5 2.5s-2.5 1-2.5 2.5a2.5 2.5 0 0 0 5 0"/>
               </svg>
@@ -850,7 +885,7 @@
           <div class="card-header">
             <span class="num-tag">2</span>
             <div class="icon-bubble blue" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M18 20V10M12 20V4M6 20v-6"/>
               </svg>
             </div>
@@ -864,7 +899,7 @@
           <div class="card-header">
             <span class="num-tag">3</span>
             <div class="icon-bubble amber" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 <path d="M9 12l2 2 4-4"/>
               </svg>
@@ -872,7 +907,7 @@
             <h3>人壽儲蓄互助基金</h3>
           </div>
           <p>
-            社員若因身故，股金全部由家屬領回，另再享有「依當年度股金一定額度內理賠，最高 10 萬元」的<strong>【人壽保險】</strong>，此項保險由互助社負擔保費，社員不需額外支出。<span class="highlight-tag">107年之前入社的社員有機會理賠到最高16萬元</span>
+            社員若因身故，股金全部由家屬領回，另再享有「依當年度股金一定額度內給付，最高 10 萬元」的<strong>【人壽儲蓄互助基金】</strong>保障，互助費由本社負擔，社員不需額外支出。<span class="highlight-tag">107年之前入社的社員最高有機會獲得16萬元給付</span>
           </p>
         </div>
 
@@ -881,7 +916,7 @@
           <div class="card-header">
             <span class="num-tag">4</span>
             <div class="icon-bubble amber" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 <circle cx="12" cy="11" r="3"/>
               </svg>
@@ -889,50 +924,50 @@
             <h3>貸款安全互助基金</h3>
           </div>
           <p>
-            社員若有辦理互助社的信用貸款，因身故，除了股金全部由家屬領回之外，另再享有「依當年一定額度內最高 60 萬免償還貸款」之保障，以減輕家屬負擔的 <strong>【貸款保險】</strong>。<span class="highlight-tag">若年紀已屆70歲則無貸款保險</span>
+            社員若有辦理互助社的信用貸款，因身故，除了股金全部由家屬領回之外，另再享有「依當年一定額度內最高 60 萬免償還貸款」之保障，以減輕家屬負擔的<strong>【貸款安全互助基金】</strong>保障。<span class="highlight-tag">年滿70歲則不適用此項保障</span>
           </p>
         </div>
 
-        <!-- 5. 社員享有優惠額外投保 -->
+        <!-- 5. 社員可參加優惠互助基金 -->
         <div class="benefit-card theme-purple">
           <div class="card-header">
             <span class="num-tag">5</span>
             <div class="icon-bubble purple" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14 2 14 8 20 8"/>
                 <path d="M9 15l2 2 4-4"/>
               </svg>
             </div>
-            <h3>社員享有優惠額外投保</h3>
+            <h3>社員可參加優惠互助基金</h3>
           </div>
           <p>
-            社員團體保險互助基金、團體意外互助基金、重大疾病互助基金、防癌互助基金、松年意外互助基金等，相關保險。一年一保，保費相當便宜。
+            社員團體互助基金、團體意外互助基金、重大疾病互助基金、防癌互助基金、松年意外互助基金等，一年一期，年繳互助費相當便宜。
           </p>
           <div class="pdf-links">
-            <a class="pdf-link" href="./115-group-insurance.pdf" target="_blank" rel="noopener" aria-label="開啟社員團體互助基金簡介 PDF">
+            <a class="pdf-link" href="./115-group-insurance.pdf" target="_blank" rel="noopener">
               <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-              <span class="pdf-text"><strong>社員團體互助基金簡介</strong><small>保障期間：每年4/1～次年3/31・一年一保</small></span>
+              <span class="pdf-text"><strong>社員團體互助基金簡介</strong><small>保障期間：每年4/1～次年3/31・一年一期</small></span>
               <span class="pdf-open">開啟 PDF</span>
             </a>
-            <a class="pdf-link" href="./115-group-accident.pdf" target="_blank" rel="noopener" aria-label="開啟社員團體意外互助基金簡介 PDF">
+            <a class="pdf-link" href="./115-group-accident.pdf" target="_blank" rel="noopener">
               <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-              <span class="pdf-text"><strong>社員團體意外互助基金簡介</strong><small>保障期間：每年9/1～次年8/31・一年一保</small></span>
+              <span class="pdf-text"><strong>社員團體意外互助基金簡介</strong><small>保障期間：每年9/1～次年8/31・一年一期</small></span>
               <span class="pdf-open">開啟 PDF</span>
             </a>
-            <a class="pdf-link" href="./115-critical-illness.pdf" target="_blank" rel="noopener" aria-label="開啟社員重大疾病互助基金簡介 PDF">
+            <a class="pdf-link" href="./115-critical-illness.pdf" target="_blank" rel="noopener">
               <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-              <span class="pdf-text"><strong>社員重大疾病互助基金簡介</strong><small>保障期間：每年8/1～次年7/31・一年一保</small></span>
+              <span class="pdf-text"><strong>社員重大疾病互助基金簡介</strong><small>保障期間：每年8/1～次年7/31・一年一期</small></span>
               <span class="pdf-open">開啟 PDF</span>
             </a>
-            <a class="pdf-link" href="./115-anti-cancer.pdf" target="_blank" rel="noopener" aria-label="開啟社員防癌互助基金簡介 PDF">
+            <a class="pdf-link" href="./115-anti-cancer.pdf" target="_blank" rel="noopener">
               <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-              <span class="pdf-text"><strong>社員防癌互助基金簡介</strong><small>保障期間：每年6/1～次年5/31・一年一保</small></span>
+              <span class="pdf-text"><strong>社員防癌互助基金簡介</strong><small>保障期間：每年6/1～次年5/31・一年一期</small></span>
               <span class="pdf-open">開啟 PDF</span>
             </a>
-            <a class="pdf-link" href="./115-松年意外互助基金簡介.pdf" target="_blank" rel="noopener" aria-label="開啟松年意外互助基金簡介 PDF">
+            <a class="pdf-link" href="./115-松年意外互助基金簡介.pdf" target="_blank" rel="noopener">
               <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 15l2 2 4-4"/></svg>
-              <span class="pdf-text"><strong>松年意外互助基金簡介</strong><small>保障期間：每年10/1～次年9/30・一年一保</small></span>
+              <span class="pdf-text"><strong>松年意外互助基金簡介</strong><small>保障期間：每年10/1～次年9/30・一年一期</small></span>
               <span class="pdf-open">開啟 PDF</span>
             </a>
           </div>
@@ -944,7 +979,7 @@
           <div class="card-header">
             <span class="num-tag">6</span>
             <div class="icon-bubble green" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
                 <path d="M6 12v5c3 3 9 3 12 0v-5"/>
               </svg>
@@ -961,7 +996,7 @@
           <div class="card-header">
             <span class="num-tag">7</span>
             <div class="icon-bubble green" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
               </svg>
             </div>
@@ -977,7 +1012,7 @@
           <div class="card-header">
             <span class="num-tag">8</span>
             <div class="icon-bubble teal" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="12" cy="12" r="5"/>
                 <line x1="12" y1="1" x2="12" y2="3"/>
                 <line x1="12" y1="21" x2="12" y2="23"/>
@@ -1001,7 +1036,7 @@
           <div class="card-header">
             <span class="num-tag">9</span>
             <div class="icon-bubble teal" aria-hidden="true">
-              <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+              <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
               </svg>
             </div>
@@ -1019,7 +1054,7 @@
     <section class="faq-section">
       <h2 class="section-title">
         <span class="title-icon-box" aria-hidden="true">
-          <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+          <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
             <circle cx="12" cy="12" r="10"/>
             <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/>
           </svg>
@@ -1028,64 +1063,65 @@
       </h2>
       
       <!-- FAQ 1: 手頭吃緊需要退社嗎？ (做法二核心問答) -->
-      <div class="faq-item active">
-        <button type="button" class="faq-question" aria-expanded="true">
+      <details class="faq-item" open>
+        <summary class="faq-question">
           <span class="faq-q-text">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
             如果近期手頭比較吃緊，一定要辦理退社嗎？
           </span>
           <span class="toggle-icon">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </span>
-        </button>
+        </summary>
         <div class="faq-answer">
           <strong>完全不需要！</strong> 儲蓄互助社的宗旨為「非為營利、非為救濟、乃是服務」，儲蓄規定極具包容性與彈性：
           <ul>
             <li><strong>每月最低僅需存入 100 元</strong>（最高不超過 3,000 元），即可輕鬆維持社員身份。</li>
-            <li>只要維持每月最低儲蓄，即可完整保留由本社全額負擔保費的<strong>【人壽保險】</strong>（身故理賠最高 10 萬元，107 年前入社最高 16 萬元），並持續享有年度營運剩餘的<strong>微股息分紅</strong>。</li>
+            <li>只要維持每月最低儲蓄，即可完整保留由本社全額負擔互助費的<strong>【人壽儲蓄互助基金】</strong>保障（身故給付最高 10 萬元，107 年前入社最高 16 萬元），並持續享有年度營運剩餘的<strong>微股息分紅</strong>。</li>
           </ul>
         </div>
-      </div>
+      </details>
 
       <!-- FAQ 2: 退社會有哪些權益損失？ (做法二核心問答) -->
-      <div class="faq-item">
-        <button type="button" class="faq-question" aria-expanded="false">
+      <details class="faq-item">
+        <summary class="faq-question">
           <span class="faq-q-text">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
             萬一辦理退社，會喪失哪些重要的權益與專屬保障？
           </span>
           <span class="toggle-icon">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </span>
-        </button>
+        </summary>
         <div class="faq-answer">
           一旦辦理退社，將立即喪失互助社提供給社員的各項專屬福利：
           <ul>
-            <li><strong>喪失免費人壽保險：</strong>失去本社全額負擔保費之最高 10 萬元（107 年前入社最高 16 萬元）人壽保險理賠保障。</li>
-            <li><strong>喪失信用貸款安全保障：</strong>失去信用貸款身故最高 60 萬元免償還之【貸款保險】（未滿 70 歲適用）。</li>
+            <li><strong>喪失人壽儲蓄互助基金保障：</strong>失去本社全額負擔互助費之最高 10 萬元（107 年前入社最高 16 萬元）身故給付保障。</li>
+            <li><strong>喪失信用貸款安全保障：</strong>失去信用貸款身故最高 60 萬元免償還之【貸款安全互助基金】保障（未滿 70 歲適用）。</li>
             <li><strong>喪失獨家專案貸款資格：</strong>失去幼稚園至大學/研究所「一年無息助學貸款」、20~45 歲「青年創業小額貸款」、25 年穩定收入「太陽能光電設備貸款」及「安養信託」申辦資格。</li>
-            <li><strong>喪失平價團保資格：</strong>失去以相當便宜保費加保團體保險、團體意外、重大疾病、防癌及松年意外互助基金之權利。</li>
+            <li><strong>喪失優惠互助基金資格：</strong>失去以相當便宜互助費參加社員團體、團體意外、重大疾病、防癌及松年意外互助基金之權利。</li>
           </ul>
           <em>因此，建議社員善用每月最低 100 元儲蓄機制保全資格，持續為自己與家庭留下最安心的後盾。</em>
         </div>
-      </div>
+      </details>
 
       <!-- FAQ 3: 互助社與一般銀行的不同 -->
-      <div class="faq-item">
-        <button type="button" class="faq-question" aria-expanded="false">
+      <details class="faq-item">
+        <summary class="faq-question">
           <span class="faq-q-text">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
             什麼是儲蓄互助社？跟一般商業銀行有何不同？
           </span>
           <span class="toggle-icon">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </span>
-        </button>
+        </summary>
         <div class="faq-answer">
           儲蓄互助社是一非營利的合作金融組織，由內政部管理、隸屬中華民國儲蓄互助協會。核心在於提供比一般銀行更具包容性的微型金融服務，透過「我為人人，人人為我」的互助精神改善經濟生活，營運剩餘皆以微股息形式回饋分配給社員，達到資源共享。
         </div>
-      </div>
+      </details>
     </section>
+    </main>
 
     <!-- ═══════════ 傳承精神與聯絡資訊 (Closing & Contact) ═══════════ -->
     <footer class="closing-card">
@@ -1101,7 +1137,7 @@
         <!-- 服務據點 -->
         <div class="contact-item-box">
           <div class="icon-part" aria-hidden="true">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
@@ -1117,20 +1153,20 @@
         <!-- 洽詢電話 -->
         <div class="contact-item-box">
           <div class="icon-part" aria-hidden="true">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
           </div>
           <div class="info-part">
             <strong>洽詢電話</strong>
-            <a href="tel:05-3792704">05-3792704 (點擊直接撥打)</a>
+            <a href="tel:+88653792704">05-3792704 (點擊直接撥打)</a>
           </div>
         </div>
 
         <!-- 共同關係資格 -->
         <div class="contact-item-box">
           <div class="icon-part" aria-hidden="true">
-            <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+            <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
               <circle cx="9" cy="7" r="4"/>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
@@ -1149,32 +1185,21 @@
   </div>
 
   <!-- ═══════════ 手機專屬底部常駐行動列 (Mobile Sticky Bar) ═══════════ -->
-  <div class="mobile-sticky-bar" aria-label="快捷聯絡列">
-    <a href="tel:05-3792704" class="mobile-btn btn-call">
-      <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+  <nav class="mobile-sticky-bar" aria-label="快捷聯絡">
+    <a href="tel:+88653792704" class="mobile-btn btn-call">
+      <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
       </svg>
       <span>立即致電諮詢</span>
     </a>
     <a href="https://www.google.com/maps/search/?api=1&query=嘉義縣朴子市文明路1-9號" target="_blank" rel="noopener" class="mobile-btn btn-map">
-      <svg class="svg-icon-stroke" viewBox="0 0 24 24">
+      <svg class="svg-icon-stroke" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
         <circle cx="12" cy="10" r="3"/>
       </svg>
       <span>地圖導航</span>
     </a>
-  </div>
-
-  <!-- ═══════════ 輕量 FAQ 互動腳本 ═══════════ -->
-  <script>
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.parentElement;
-        const isExpanded = item.classList.toggle('active');
-        button.setAttribute('aria-expanded', isExpanded);
-      });
-    });
-  </script>
+  </nav>
 
 </body>
 </html>
